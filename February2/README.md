@@ -1,9 +1,9 @@
-# Assignment - February 2
+# Assignment - February 2, 2021
 ## Description
 Using loops (for() or while()) in some way, along with everything that you've learned so far, make a simple work of art. 
 
 ## Screenshot
-
+![](LoopsAssignment.png)
 
 ## Difficulties and Discoveries
 The difficulties I faced in this assignment was with regards to two things:
