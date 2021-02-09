@@ -1,6 +1,6 @@
 # Assigment - February 9, 2021
 ## Description 
-Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? Well, if not, click here. For this week’s assignment I have decided to take inspiration from this game and do a simpler version. It involves a ball being bounced around the screen, in an effort to hit all the blocks, destroying them in order to win the game. The goal is to complete this task before all lives are lost or it is GAME OVER. The game begins with a press of the mouse in order to get the ball moving. If the ball misses the slider and hits the bottom of the screen, a life is lost and the ball and slider’s position is reset.
+Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? Well, if not, click [here](https://www.youtube.com/watch?v=ezZz2pCIVMQ). For this week’s assignment I have decided to take inspiration from this game and do a simpler version. It involves a ball being bounced around the screen, in an effort to hit all the blocks, destroying them in order to win the game. The goal is to complete this task before all lives are lost or it is GAME OVER. The game begins with a press of the mouse in order to get the ball moving. If the ball misses the slider and hits the bottom of the screen, a life is lost and the ball and slider’s position is reset.
 
 ## Initial Outline
 ![](images/sketch.png)
@@ -16,6 +16,8 @@ Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? We
 ![](images/process2.png)
 
 #### The ball moving and reseting
+![](gifs/Ball_Move_and_Reset.gif)
+Note Here: A change was made so that the ball does not reset after it has passed the slider's y coordinate but after it has hit the bottom of the screen.
 
 #### The slider, ball and the bricks
 ![](images/process3.png)
@@ -35,7 +37,7 @@ Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? We
 ![](images/loss.png)
 
 ## Additional Inspiration
-For the background I was also really inspired by Thais’ raindrops in her February 2 assignment so, I attempted to do something similar but what looked more like stars streaking through the sky.
+For the background I was also really inspired by Thais’ raindrops in her February 2 [assignment](https://github.com/ThaisAlvarenga/IntroToIM/tree/main/February_2/ThaisAlvarenga_Assigment2) so, I attempted to do something similar but what looked more like stars streaking through the sky.
 
 ## Difficulties
 - The major problem that I had was with the collision of the ball and the blocks. The change in X or Y speed depended on knowing which side of the block was to be hit. I did not realise this at first and so spent quite a bit of time trying to figure out why the ball was not bouncing off the blocks. 
