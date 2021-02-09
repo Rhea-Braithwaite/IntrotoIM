@@ -3,10 +3,26 @@
 Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? Well, if not, click here. For this week’s assignment I have decided to take inspiration from this game and do a simpler version. It involves a ball being bounced around the screen, in an effort to hit all the blocks, destroying them in order to win the game. The goal is to complete this task before all lives are lost or it is GAME OVER. The game begins with a press of the mouse in order to get the ball moving. If the ball misses the slider and hits the bottom of the screen, a life is lost and the ball and slider’s position is reset.
 
 ## Initial Outline
-
+![](images/sketch.png)
 ## Improvements Over Time
 
-## FInal Product
+#### The slider
+![](images/process1.png)
+
+#### The slider and the ball
+![](images/process2.png)
+
+
+#### The slider, ball and the bricks
+![](images/process3.png)
+
+## Final Product
+
+#### The Game
+
+#### WIn Screen
+
+#### Game Over Screen
 
 ## Additional Inspiration
 For the background I was also really inspired by Thais’ raindrops in her February 2 assignment so, I attempted to do something similar but what looked more like stars streaking through the sky.
