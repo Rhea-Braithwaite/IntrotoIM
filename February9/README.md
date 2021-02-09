@@ -19,7 +19,7 @@ Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? We
 ## Final Product
 
 #### The Game
-
+![](gifs/Final Game.gif)
 #### Win Screen
 ![](images/win.png)
 
