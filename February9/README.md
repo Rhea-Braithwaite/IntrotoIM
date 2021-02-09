@@ -9,17 +9,25 @@ Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? We
 #### The slider
 ![](images/process1.png)
 
+### The slider moving
+![](gifs/slider.gif)
+
 #### The slider and the ball
 ![](images/process2.png)
 
+#### The ball moving and reseting
 
 #### The slider, ball and the bricks
 ![](images/process3.png)
 
+#### The ball colliding with the blocks and bouncing off
+![](gifs/collision.gif)
+
 ## Final Product
 
 #### The Game
-![](gifs/Final Game.gif)
+![](gifs/Final_Game.gif)
+
 #### Win Screen
 ![](images/win.png)
 
