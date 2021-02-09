@@ -20,9 +20,11 @@ Have you ever had a Blackberry? Are you familiar with the Brick Breaker Game? We
 
 #### The Game
 
-#### WIn Screen
+#### Win Screen
+![](images/win.png)
 
 #### Game Over Screen
+![](images/loss.png)
 
 ## Additional Inspiration
 For the background I was also really inspired by Thais’ raindrops in her February 2 assignment so, I attempted to do something similar but what looked more like stars streaking through the sky.
