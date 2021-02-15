@@ -42,7 +42,7 @@ Source: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
 ### Start Screen
 I wanted to add a Start Screen to make the project seem more whole. This screen has the Netflix N and a catchy explanation of what the program does. 
 Then based on a mouse press event, the user is brought to the graph. 
-![](startScreen/info.png)
+![](images/startScreen.png)
 
 ## Difficulties
 - A major difficulty was string indexing. I had thought that because strings are arrays of characters elements could be accessed with square brackets. 
