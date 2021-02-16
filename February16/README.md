@@ -49,12 +49,14 @@ Then based on a mouse press event, the user is brought to the graph.
 However, this is not the case and the .substring(int startIndex, endIndex) method must to be used.
 - Another difficulty was figuring out how to display only one movie’s information at a time. Some movies will have similar scores and so their circles will overlap. 
 Based on the code, if the mouse is within the circle the movie information should be displayed. However, I couldn’t figure out a way to have only the circle on 
-top’s information be displayed. 
+top’s information be displayed. Eventually I had a variable that determined if the mouse was within a circle, inRange, and another that determined if movie information was being displayed, boxOffice. If there was no information being displayed and the mouse was within the range of the circle, then the movie information was displayed. Otherwise it was not displayed. However, I had to reset the inRange varable after each check of the Arraylist, which created a flickering effect that I could not fix.
+
 
 ## Discoveries
 - My major discovery was using the .substrings method for string indexing. The formatting is
   - string substring(int startIndex, endIndex)
   - If you want from a certain index to the end of the string just place the startIndex alone: string substring(int startIndex) 
+ - The dist() function does not appear to consider the translation of the origin to a new point. So I had to calculate the movie's coordinates from two origins, the one in the top left, and the one required to draw the graph.
 
 
 
