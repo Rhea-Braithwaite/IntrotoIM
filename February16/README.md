@@ -15,7 +15,7 @@ A graph is displayed to the user, with each circle representing a movie. Based o
 ### Findiing My Data Set
 I was not really sure what data set to use, so I eventually had to use two of them from Kaggle.com.
 - One which provided the IMDb and the Rotten Tomatoes scores. Because it had both Amazon Prime and Netflix shows, I only used the Netflix ones: https://www.kaggle.com/jyotmakadiya/popular-movies-and-tv-shows-amazon-prime-netflix 
-- And then another that provided the show descriptions: https://www.kaggle.com/ritesh2000/trending-tv-shows-on-netflix 
+- And then another that provided the show descriptions: https://www.kaggle.com/shivamb/netflix-shows
 ### Horizontal and Vertical Axis 
 I started out by drawing the horizontal and vertical axes, using a for loop with vertical and horizontal lines to see the scale. 
 The origin was translated to a new point (100, 920), in order to get the right angle design.
