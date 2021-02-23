@@ -118,9 +118,9 @@ void createBlocks(int level, Block[] blocks, int rows, int yPos, int XGAP, int Y
 ### Pictures for Block Damage
 Additionally, I created images for the cracks which are to appear when the blocks are hit. Initally I drew squares with the cracks in them, but I needed the transparent background. So I used the website [remove.bg](https://www.remove.bg/) to remove the background. The goal is to place the image over the block in the game whenever it is hit. 
 
-##### Level 1
+##### Damage 1
 ![](images/Damage1.png)
-##### Level 2
+##### Damage 2
 ![](images/Damage2.png)
 
 #### Reflections
