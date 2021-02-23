@@ -21,6 +21,7 @@ balls speed increased. If a life is lost, then the speed is reset.
 ### Accomplished Today:
 - Design 2 Additional Levels
 - Write the code to incorporate the different blocks for each level. 
+- Pictures for the Block Damage
 
 #### Design for Additional Levels
 
@@ -114,10 +115,19 @@ void createBlocks(int level, Block[] blocks, int rows, int yPos, int XGAP, int Y
 ##### Level 3
 ![](images/Level3.png)
 
+### Pictures for Block Damage
+Additionally, I created images for the cracks which are to appear when the blocks are hit. Initally I drew squares with the cracks in them, but I needed the transparent background. So I used the website [remove.bg](https://www.remove.bg/) to remove the background. The goal is to place the image over the block in the game whenever it is hit. 
+
+##### Level 1
+![](images/Damage1.png)
+##### Level 2
+![](images/Damage2.png)
+
 #### Reflections
 - In hindsight, it makes sense to make a class for the levels themselves. Each with its own array of blocks, and corresponding variables for the number of rows, 
 the vertical gaps as well as the horizontal gaps between each block. Technically, I am doing that now so a class would be a more effective approach.
 - Doing the levels is a step in the right direction to creating the game, as without them, the game cannot work. 
 - But I need to create the classes for the Levels because their respective array blocks will be used throughout the code. 
+- I will need to add a image variable to the block class for the damage images so they can then be displayed when the block is hit. 
 
 
