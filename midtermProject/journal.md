@@ -126,8 +126,8 @@ Additionally, I created images for the cracks which are to appear when the block
 #### Reflections
 - In hindsight, it makes sense to make a class for the levels themselves. Each with its own array of blocks, and corresponding variables for the number of rows, 
 the vertical gaps as well as the horizontal gaps between each block. Technically, I am doing that now so a class would be a more effective approach.
-- Doing the levels is a step in the right direction to creating the game, as without them, the game cannot work. 
+- Completing the blocks for the levels is a step in the right direction to creating the game, as without them, the game cannot work. 
 - But I need to create the classes for the Levels because their respective array blocks will be used throughout the code. 
-- I will need to add a image variable to the block class for the damage images so they can then be displayed when the block is hit. 
+- I will need to add an image variable to the block class for the damage images, so they can then be displayed when the block is hit. 
 
 
