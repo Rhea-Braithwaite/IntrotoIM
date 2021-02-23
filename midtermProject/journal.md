@@ -25,8 +25,9 @@ balls speed increased. If a life is lost, then the speed is reset.
 #### Design for Additional Levels
 
 ##### Level 2
-
+![](images/Sketch1.png)
 ##### Level 3
+![](images/Sketch2.png)
 
 #### Coding the Blocks for Each Level
 For the blocks for each level, I used arrays. Each array had its own variables regarding the starting positions for each block, the number of rows, the vertical 
@@ -107,10 +108,11 @@ void createBlocks(int level, Block[] blocks, int rows, int yPos, int XGAP, int Y
 #### Result:
 
 ##### Level 1
-
+![](images/Level1.png)
 ##### Level 2
-
+![](images/Level2.png)
 ##### Level 3
+![](images/Level3.png)
 
 #### Reflections
 - In hindsight, it makes sense to make a class for the levels themselves. Each with its own array of blocks, and corresponding variables for the number of rows, 
