@@ -130,4 +130,27 @@ the vertical gaps as well as the horizontal gaps between each block. Technically
 - But I need to create the classes for the Levels because their respective array blocks will be used throughout the code. 
 - I will need to add an image variable to the block class for the damage images, so they can then be displayed when the block is hit. 
 
+## February 22, 2001
+
+### Accomplished Today:
+- Created the Levels Class
+- Completed Level Fuctionality for Breaking Blocks After 3 Hits
+- Designed the Home Screen
+
+#### Levels Class
+
+#### Breaking Blocks After 3 Hits
+
+#### Design the Home Screen
+For the home screen I did a sketch to outline the screen itself. The user must click start to start the game and simply has to move their mouse over the question mark to see the game instructions. 
+
+Sketch
+
+![](images/Sketch3.png)
+
+Homescreen
+
+![](images/Homescreen.png)
+
+
 
