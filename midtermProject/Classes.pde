@@ -31,15 +31,16 @@ class Block {
 }
 
 class Level {
-  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel, blocksRemaining, score, lives;
+  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel, blocksRemaining, score, lives, numOfObstacles;
   Block[] blocks;
   boolean win;
   float time;
   
-  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap, int numOfObstacles) {
+  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap, int obstacles) {
     gameLevel = level;
     numOfBlocks = totalBlocks;
     blocksRemaining = totalBlocks-numOfObstacles;
+    numOfObstacles = obstacles;
     rows = numOfRows;
     yPos = yPosition;
     xGap = verticalGap;
@@ -150,6 +151,7 @@ class Level {
    score = 0;
    lives = 3;
    win = false;
+   blocksRemaining = numOfBlocks-numOfObstacles;
    for(int i=0; i<numOfBlocks; i++){
      blocks[i].show = true;
      blocks[i].damage = 0;
