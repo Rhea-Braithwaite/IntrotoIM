@@ -228,9 +228,7 @@ class Level {
   } 
 ````
 
-#### Level Complete, Level Lost and Game Won Screens
-
-
+Code for collisison with block
 ````
 if (level.blocks[i].show == true) { //If the block has not been destroyed yet
         //Check if the ball has hit the block
@@ -242,13 +240,50 @@ if (level.blocks[i].show == true) { //If the block has not been destroyed yet
              }
           }         
 ````
-#### Restart
-
+#### Level Complete, Level Lost and Game Won Screens
+Level Lost - is displayed when all lives are lost on a level. The user must then begin again from level 1, hence the restart prompt
 ![](images/LevelLost.png)
+Note: Preliminary screen, that is why the score and time are zero.
+
+Level Complete - is displayed when the user has destoryed all the blocks on the level. Then there is a prompt to move on to the next level
 ![](images/LevelComplete.png)
+Note: Preliminary screen, that is why the score and time are zero.
+
+Game Won - is displayed after the user has completed all levels. The user can then restart by pressing the mouse
 ![](images/GameWon.png)
 
+#### Restart
+Considering the display decision that I made earlier, restarting was much easier than having to create new blocks for each level. Instead, each level's block has their show turned back to true and their damage changed to 0. In addition, the level score is reinitialized to 0, the level win turned to false, and the number of lives made 3.
 
+````
+ void reset() {
+   score = 0;
+   lives = 3;
+   win = false;
+   blocksRemaining = numOfBlocks-numOfObstacles;
+   for(int i=0; i<numOfBlocks; i++){
+     blocks[i].show = true;
+     blocks[i].damage = 0;
+   }
+ }
+ 
+````
+
+For the levels themselves, if a level is lost, the same principal applies, however a for loop is used to iterate from the current evel to all previous levels and reset each once.
+
+````
+void resetLevels(){
+  for(int i = currLevelIndex; i>= 0; i--){
+    levels[i].reset();
+  }
+  currLevelIndex=0;
+  pause = false; // Determines if the game should be paused to display the Level Complete Scrren
+  start = false; // Dtermines if the levels should be seen yet
+  startLevel = false; // Determines if the level should begin or not
+  gameWon = false; // Gme has not been won yet
+}
+ 
+````
 #### Reflections
  
 
