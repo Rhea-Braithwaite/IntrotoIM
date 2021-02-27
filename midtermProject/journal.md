@@ -186,5 +186,73 @@ Homescreen
 
 ![](images/Homescreen.png)
 
+#### Reflections
+- Since the game is to begin with the instructions, the help button that was added to the home screen is no longer required. 
+
+## February 27, 2021
+
+### Accomplished Today:
+- Levels Array
+- Level Complete, Level Lost and Game Won Screens
+- Restart 
+
+#### Levels Class
+- Again, I realized that instead of having mutltiple lines of code, for each level, it made sense to have an array of levels, with a varibale tracking the current Level. So that is what I did. I created an array of levels, called levels, and added an integer variable currlevel, to track the current Level. 
+- Whilst coding, I realized it would be better to have the variable instead be the currLevelIndex, because the variable is incremented at different points, so to prevent Array Index errors, I decided to use the variable as the index instead. 
+- I also had had, separate variables for the scores and lives for each variable, so I added those to the levels class, as well as a win variable to check if the level had been won. 
+- Additionally, to check if the level was won, I decided to check if the blocks Remaining were equal to zero, in other words if all blocks wer destoryed. But for levels 2 and 3, becuase their blocks involve the obstacles, I had to consider them in the calculation for the blocks remaining. 
+- and finally, to make it seem more like a fame, I added a time variable for the level, so the user can see how long it took to complete a level.
+
+The following is the final product.
+
+````
+class Level {
+  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel, blocksRemaining, score, lives;
+  Block[] blocks;
+  boolean win;
+  float time;
+  
+  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap, int numOfObstacles) {
+    gameLevel = level;
+    numOfBlocks = totalBlocks;
+    blocksRemaining = totalBlocks-numOfObstacles;
+    rows = numOfRows;
+    yPos = yPosition;
+    xGap = verticalGap;
+    yGap = horizontalGap;
+    blocks = new Block[numOfBlocks];
+    win = false;
+    score = 0;
+    lives = 3;
+    time = 0;
+  } 
+````
+
+#### Level Complete, Level Lost and Game Won Screens
+
+
+````
+if (level.blocks[i].show == true) { //If the block has not been destroyed yet
+        //Check if the ball has hit the block
+        if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){ 
+          if (level.blocks[i].obstacle == false){ //Checks if the block is an obstacle
+            level.blocks[i].damage ++; //If it is not an obstacle, then increment the damage variable
+             if (level.blocks[i].damage == 3) { // If the damage variable is 3, then "destroy" the blok by not displaying it.
+               level.blocks[i].show = false;
+             }
+          }         
+````
+#### Restart
+
+![](images/Sketch3.png)
+
+Homescreen
+
+![](images/Homescreen.png)
+
+#### Reflections
+ 
+
+
 
 
