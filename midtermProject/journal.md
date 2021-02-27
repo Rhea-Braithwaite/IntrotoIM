@@ -230,8 +230,6 @@ class Level {
 
 #### Level Complete, Level Lost and Game Won Screens
 
-##### Level Complete
-
 
 ````
 if (level.blocks[i].show == true) { //If the block has not been destroyed yet
@@ -246,11 +244,10 @@ if (level.blocks[i].show == true) { //If the block has not been destroyed yet
 ````
 #### Restart
 
-![](images/Sketch3.png)
+![](images/LevelLost.png)
+![](images/LevelComplete.png)
+![](images/GameWon.png)
 
-Homescreen
-
-![](images/Homescreen.png)
 
 #### Reflections
  
