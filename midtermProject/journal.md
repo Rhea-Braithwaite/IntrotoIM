@@ -285,7 +285,10 @@ void resetLevels(){
  
 ````
 #### Reflections
- 
+- I need to add the instructions screen to the beginning of the screen. I don't want to add it yet, in case my game design for some reason changes between now and the submission deadline. Plan - use an image because it is easier than using the text code in Processing
+- Maybe add a bit more to the Game Won screen. It seems a bit bland.
+- I continue to change foundational elements of my code. Try and write the pseudocode before I type it in Processing. 
+- Add the names of Each level to the Level Screen, so the user can know what level it is. Maybe then add the specific level that has been lost or completed to these screens respectively. 
 
 
 
