@@ -16,7 +16,7 @@ misses the slider and hits the bottom of the screen, a life is lost, and the bal
 balls speed increased. If a life is lost, then the speed is reset.
 - If the user wins all the levels, then a final congratulatory screen is displayed, and a Restart Button is displayed that the user can select to restart from Level 1. 
 
-## February 22, 2001
+## February 22, 2021
 
 ### Accomplished Today:
 - Design 2 Additional Levels
@@ -130,7 +130,7 @@ the vertical gaps as well as the horizontal gaps between each block. Technically
 - But I need to create the classes for the Levels because their respective array blocks will be used throughout the code. 
 - I will need to add an image variable to the block class for the damage images, so they can then be displayed when the block is hit. 
 
-## February 22, 2001
+## February 24, 2021
 
 ### Accomplished Today:
 - Created the Levels Class
@@ -138,7 +138,7 @@ the vertical gaps as well as the horizontal gaps between each block. Technically
 - Designed the Home Screen
 
 #### Levels Class
-
+Having realized that it would be more effective to have a class for the game levels, I did just that. Utlizing the variables for 
 #### Breaking Blocks After 3 Hits
 
 #### Design the Home Screen
