@@ -138,11 +138,45 @@ the vertical gaps as well as the horizontal gaps between each block. Technically
 - Designed the Home Screen
 
 #### Levels Class
-Having realized that it would be more effective to have a class for the game levels, I did just that. Utlizing the variables for 
-#### Breaking Blocks After 3 Hits
+Having realized that it would be more effective to have a class for the game levels, I did just that. Utlizing the variables for array of blocks, and corresponding variables for the number of rows, the starting y position for the first block, the vertical gaps as well as the horizontal gaps between each block. 
+````
+class Level {
+  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel;
+  Block[] blocks;
+  
+  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap) {
+    gameLevel = level;
+    numOfBlocks = totalBlocks;
+    rows = numOfRows;
+    yPos =yPosition;
+    xGap = verticalGap;
+    yGap = horizontalGap;
+    blocks = new Block[numOfBlocks];
+  }
+}
+````
+Then I created three level objects for each level, which were used thoughout the code, in order for the game to run.
 
+Because the ball had to collide with the specific blocks for a level, I made the collision method of the block class accept the current level, and utilize that level's block variable to determine if a collision was taking taking place. 
+
+
+#### Breaking Blocks After 3 Hits
+To make the game more difficult, the ball has to hit the block three times in total for it to be destroyed. To make this possible, I added a varaible to the Block class, damage which is initalized to zero and each time a collision takes place, it is incremented until it becomes three. At this point, I considered the fact that the game has to restart. Instead of deleting the Block object, it made sense to just not display it. So I added another variable called show, which is either true or false. Initially it is true, meaning it has to be displayed, and when it is "destroyed" it becomes false, so it is not displayed on screen or used in further collisions.
+
+````
+if (level.blocks[i].show == true) { //If the block has not been destroyed yet
+        //Check if the ball has hit the block
+        if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){ 
+          if (level.blocks[i].obstacle == false){ //Checks if the block is an obstacle
+            level.blocks[i].damage ++; //If it is not an obstacle, then increment the damage variable
+             if (level.blocks[i].damage == 3) { // If the damage variable is 3, then "destroy" the blok by not displaying it.
+               level.blocks[i].show = false;
+             }
+          }         
+````
 #### Design the Home Screen
 For the home screen I did a sketch to outline the screen itself. The user must click start to start the game and simply has to move their mouse over the question mark to see the game instructions. 
+
 
 Sketch
 
