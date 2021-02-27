@@ -1,3 +1,4 @@
+  
 final int BLOCKWIDTH = 200;
 final int BLOCKHEIGHT =75;
 
@@ -15,7 +16,7 @@ class Block {
     show = true;
     damage = 0;
     if (obstacle == false){
-      blockColour = color(0, random(255), random(255));
+      blockColour = color(0, random(100, 255), random(100, 255));
     }
     else {
       blockColour = color(255, 0, 0);
@@ -30,17 +31,24 @@ class Block {
 }
 
 class Level {
-  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel;
+  int numOfBlocks, rows, yPos, xGap, yGap, gameLevel, blocksRemaining, score, lives;
   Block[] blocks;
+  boolean win;
+  float time;
   
-  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap) {
+  Level(int level, int totalBlocks, int numOfRows, int yPosition, int verticalGap, int horizontalGap, int numOfObstacles) {
     gameLevel = level;
     numOfBlocks = totalBlocks;
+    blocksRemaining = totalBlocks-numOfObstacles;
     rows = numOfRows;
-    yPos =yPosition;
+    yPos = yPosition;
     xGap = verticalGap;
     yGap = horizontalGap;
     blocks = new Block[numOfBlocks];
+    win = false;
+    score = 0;
+    lives = 3;
+    time = 0;
   }
   
   void createBlocks(){
@@ -110,6 +118,43 @@ class Level {
        }
       }         
   }
+  void score() { // Display the game score
+    textSize(43);
+    fill(45, 247, 66); // Colour the score text green;
+    textAlign(LEFT);
+    text("Score: " + levels[currLevelIndex].score, 0, textY);
+  }
+
+  void remainingLives() {
+    textSize(43);
+    fill(45, 247, 66); // Colour the lives text green;
+    textAlign(RIGHT);
+    text("Lives: " + levels[currLevelIndex].lives, width-100, textY);
+  }
+  void endOfLevel(){
+    if (lives != 0 && blocksRemaining == 0 ){
+      startLevel = false;
+      gameBall.reset();
+      pause = true;
+      win = true;
+    }
+    else if (lives == 0){
+      startLevel = false;
+      gameBall.reset();
+      win = false;
+      pause = true;
+    }
+  }
+  
+ void reset() {
+   score = 0;
+   lives = 3;
+   win = false;
+   for(int i=0; i<numOfBlocks; i++){
+     blocks[i].show = true;
+     blocks[i].damage = 0;
+   }
+ }
 }
 
 // Slider Variables
@@ -182,15 +227,15 @@ class Ball {
   }
   
   void ballStart() {
-    if (mousePressed && inMotion == false ) { // If the ball is not moving and the mouse has been pressed, the ball starts moving
+    if (startLevel == true && inMotion == false ) { // If the ball is not moving and the mouse has been pressed, the ball starts moving
         inMotion = true;
         xSpeed = xOptions[int(random(0, 2))]; // Randomly choose the XSpeed
         ySpeed = -5; // Randomly choose the YSpeed
     }
   }
   void reset() { // Reset the ball's location back to the original point
-    lives --; //Decrement the number of lives by 1
     inMotion = false;
+    startLevel = false;
     x = BALLX;
     y = BALLY;
     xSpeed = INITIALSPEED;
@@ -198,7 +243,7 @@ class Ball {
     gameSlider.reset(); //Reset the sldier's position
   }
   
-  void collision(Level level) {
+  void collision() {
     if (x<radius || x+radius>width ) { // Change directions if the ball is at the left or right border of the screen
       xSpeed = -xSpeed;
     }
@@ -212,14 +257,16 @@ class Ball {
   
     }
     
-    for (int i=0; i< level.numOfBlocks; i++) {
+    for (int i=0; i< levels[currLevelIndex].numOfBlocks; i++) {
       // If the ball collides with a block
-      if (level.blocks[i].show == true) {
-        if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){
-          if (level.blocks[i].obstacle == false){
-            level.blocks[i].damage ++;
-             if (level.blocks[i].damage == 3) {
-               level.blocks[i].show = false;
+      if (levels[currLevelIndex].blocks[i].show == true) {
+        if(x+radius >= levels[currLevelIndex].blocks[i].x && x-radius <= (levels[currLevelIndex].blocks[i].x + BLOCKWIDTH) && y+radius >= levels[currLevelIndex].blocks[i].y && y-radius <= (levels[currLevelIndex].blocks[i].y + BLOCKHEIGHT)){
+          if (levels[currLevelIndex].blocks[i].obstacle == false){
+            levels[currLevelIndex].blocks[i].damage ++;
+             if (levels[currLevelIndex].blocks[i].damage == 1) {
+               levels[currLevelIndex].blocks[i].show = false;
+               levels[currLevelIndex].blocksRemaining --;
+               //print(level.blocksRemaining);
              }
           }
           
@@ -234,16 +281,15 @@ class Ball {
           // Test to see which speed should be changed
           
           // If a change in the X Speed of the ball still presents a collision with the same block, change the Y Speed
-          if(tempX+radius >= level.blocks[i].x && tempX-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){
+          if(tempX+radius >= levels[currLevelIndex].blocks[i].x && tempX-radius <= (levels[currLevelIndex].blocks[i].x + BLOCKWIDTH) && y+radius >= levels[currLevelIndex].blocks[i].y && y-radius <= (levels[currLevelIndex].blocks[i].y + BLOCKHEIGHT)){
             ySpeed = -ySpeed;
           }
           else {
             // If a change in the Y Speed of the ball still presents a collision with the same block, change the X Speed
-            if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && tempY+radius >= level.blocks[i].y && tempY-radius <= (level.blocks[i].y + BLOCKHEIGHT)){
+            if(x+radius >= levels[currLevelIndex].blocks[i].x && x-radius <= (levels[currLevelIndex].blocks[i].x + BLOCKWIDTH) && tempY+radius >= levels[currLevelIndex].blocks[i].y && tempY-radius <= (levels[currLevelIndex].blocks[i].y + BLOCKHEIGHT)){
               xSpeed = -xSpeed;
             }
-          }
-          
+          } 
         }
       }
     }
@@ -252,6 +298,7 @@ class Ball {
   void outOfBounds() {
     if (y+radius == height) { //If the ball reaches the bottom of the screen reset its position
       reset();
+      levels[currLevelIndex].lives --; //Decrement the number of lives by 1
     }
   }
   
