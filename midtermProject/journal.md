@@ -230,6 +230,8 @@ class Level {
 
 #### Level Complete, Level Lost and Game Won Screens
 
+##### Level Complete
+
 
 ````
 if (level.blocks[i].show == true) { //If the block has not been destroyed yet
