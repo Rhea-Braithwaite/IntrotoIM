@@ -301,30 +301,47 @@ void resetLevels(){
 #### Added the Images for a Damaged Block
 Since a block has to be hit 3 times for it to be destroyed, the images that I designed were added into two PImage variables for each block. And depending on the value of the damage variable then a different one is displayed on top of the block.
 
+Overall view of the Game When a Block is Hit
+
+![](images/BlockDamage.png)
+
 Damage = 1
 
+![](images/Hit1.png)
+
 Damage = 2
+
+![](images/Hit2.png)
+
+
+#### Game Sounds
+I also added four different sounds to the game.
+- One for when a level is lost
+- Another for when a level is completed
+- A sound for when the ball hits a block
+- And background music whilst a level is being played.
+
+I had to utilize additional boolean variables to determine if a sound had already been played, for example with the level completed screen, so as to not have an active repition each time the sound file was completed. 
+
+For example
+````
+if (win.isPlaying() == false && played == false){ //win is a soundFile for the level completed sound
+  win.play();
+  played = true;
+}    
 ````
 
+#### Added Time Display
+Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second. 
+````
+void updateTime() {
+  minutes = frames/3600;
+  seconds = frames/60;
+}
 ````
 
-
-````
-
-````
-#### Le
-
-![](images/GameWon.png)
-
-#### Re
-
-
-````
-
-````
-
-For the levels themselves, if a level is lost, the same principal applies, however a for loop is used to iterate from the current evel to all previous levels and reset each once.
-
+#### Increased Speed for Levels 2 and 3
+Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the ySpeed and xSpeed is increased by 3
 ````
 
 ````
