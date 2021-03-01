@@ -290,6 +290,37 @@ void resetLevels(){
 - I continue to change foundational elements of my code. Try and write the pseudocode before I type it in Processing. 
 - Add the names of Each level to the Level Screen, so the user can know what level it is. Maybe then add the specific level that has been lost or completed to these screens respectively. 
 
+## March 1, 2021
 
+### Accomplished Today:
+- 
+
+#### 
+````
+
+````
+
+
+````
+
+````
+#### Le
+
+![](images/GameWon.png)
+
+#### Re
+
+
+````
+
+````
+
+For the levels themselves, if a level is lost, the same principal applies, however a for loop is used to iterate from the current evel to all previous levels and reset each once.
+
+````
+
+````
+#### Reflections
+- 
 
 
