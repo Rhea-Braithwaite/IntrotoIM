@@ -293,9 +293,17 @@ void resetLevels(){
 ## March 1, 2021
 
 ### Accomplished Today:
-- 
+- Added the images for a Damaged Block
+- Added Game Sounds
+- Added Time Display
+- Increased Speed for Levels 2 and 3
 
-#### 
+#### Added the Images for a Damaged Block
+Since a block has to be hit 3 times for it to be destroyed, the images that I designed were added into two PImage variables for each block. And depending on the value of the damage variable then a different one is displayed on top of the block.
+
+Damage = 1
+
+Damage = 2
 ````
 
 ````
