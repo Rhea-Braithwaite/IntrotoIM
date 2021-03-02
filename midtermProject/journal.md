@@ -376,4 +376,51 @@ Gif Showing the Ball's Increase in Speed
 - Increasing the speed showed that there were errors in my collision code that need to be fixed. When the speed is increased, the ball no longer bounces when it immediately comes into contact with a block or the slide. Parts of the ball overlap with these objects before it bounces and sometimes the ball is stuck within the slider. So I need to fix those bugs.
 - Maybe I could add a sound at the beginning of the game, when the Instructions Screen and Welcome Screen are visible. 
 
+## March 2, 2021
+
+### Accomplished Today:
+- Updated the Increase Speed of the Ball
+- How to Play
+- Background
+
+#### Updated the Increase Speed of the Ball
+I realized that the ball's speed had to increase by 1. The bigger the value that the speed incremented by, the more the ball overlapped with the blocks and the slider. The condition to decide if there is a collision, conisder's if the ball's edge is inside the block. By increasing the value of the speed this is therefore more likel. Thus, to minimize overlapping, the incrementing value was made 1. It took a while to figure this out.  
+
+````
+  void increaseSpeed(){
+    if(currLevelIndex!=0){
+      if (xSpeed < 0){
+        xSpeed -= 1;
+      }
+      else{
+        xSpeed += 1;
+      }
+      
+      if(ySpeed <0){
+        ySpeed -= 1;
+      }
+      else{
+        ySpeed += 1;
+      }
+    }
+
+  }
+````
+
+#### How To Play
+For the Instructions screen, which is required at the beginning of the game, I deciced to write the instructions in a textbox in word, and then save the textbox as an image. This image was then used within a PImage variable and simply displayed. I found this much easier, than manipulating text code. 
+
+Here is the Result
+
+#### Background
+Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
+
+````
+  
+````
+
+
+#### Reflections
+- 
+
 
