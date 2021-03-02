@@ -341,11 +341,30 @@ void updateTime() {
 ````
 
 #### Increased Speed for Levels 2 and 3
-Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the ySpeed and xSpeed is increased by 3
-````
+Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the ySpeed is increased by 1 and the xSpeed is increased by 3. Here I realized that if it is that one of these values is negative, then I would have to subtract the 1, and the 3, otherwise it would do the opposite and make the speed slower, because I am adding a positive number to a negative number. 
 
 ````
+  void increaseSpeed(){
+    if(currLevelIndex!=0){
+      if (xSpeed < 0){
+        xSpeed -= 1;
+      }
+      else{
+        xSpeed += 1;
+      }
+      
+      if(ySpeed <0){
+        ySpeed -= 3;
+      }
+      else{
+        ySpeed += 3;
+      }
+    }
+
+  }
+````
 #### Reflections
-- 
+- Increasing the speed showed that there were errors in my collision code that need to be fixed. When the speed is increased, the ball no longer bounces when it immediately comes into contact with a block or the slide. Parts of the ball overlap with these objects before it bounces and sometimes the ball is stuck within the slider. So I need to fix those bugs.
+- Maybe I could add a sound at the beginning of the game, when the Instructions Screen and Welcome Screen are visible. 
 
 
