@@ -415,6 +415,7 @@ Here is the Result
 #### Background
 Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
 
+![](images/Background.gif)
 ````
   
 ````
