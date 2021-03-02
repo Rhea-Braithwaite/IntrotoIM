@@ -323,6 +323,7 @@ void updateTime() {
 ````
 
 Gif Showing Time Display as well as Block Cracks
+
 ![](images/Gameplay.gif)
 
 #### Game Sounds
@@ -368,6 +369,7 @@ Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, t
   }
 ````
 Gif Showing the Ball's Increase in Speed
+
 ![](images/IncreaseSpeed.gif)
 
 #### Reflections
