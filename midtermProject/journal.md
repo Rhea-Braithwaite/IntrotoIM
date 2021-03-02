@@ -412,16 +412,18 @@ For the Instructions screen, which is required at the beginning of the game, I d
 
 Here is the Result
 
+![](images/HowToPlay.png)
+
 #### Background
 Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
 
 ![](images/Background.gif)
-````
-  
-````
+
 
 
 #### Reflections
-- 
+- Collision detection is a lot more difficult than I had anticipated. And my method does not provide the desired result
+- Making images of texts, is much easier than writing the code for the text line by line.
+
 
 
