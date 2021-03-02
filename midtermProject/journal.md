@@ -313,6 +313,17 @@ Damage = 2
 
 ![](images/Hit2.png)
 
+#### Added Time Display
+Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second. 
+````
+void updateTime() {
+  minutes = frames/3600;
+  seconds = frames/60;
+}
+````
+
+Gif Showing Time Display as well as Block Cracks
+![](images/Gamplay.gif)
 
 #### Game Sounds
 I also added four different sounds to the game.
@@ -331,14 +342,7 @@ if (win.isPlaying() == false && played == false){ //win is a soundFile for the l
 }    
 ````
 
-#### Added Time Display
-Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second. 
-````
-void updateTime() {
-  minutes = frames/3600;
-  seconds = frames/60;
-}
-````
+
 
 #### Increased Speed for Levels 2 and 3
 Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the ySpeed is increased by 1 and the xSpeed is increased by 3. Here I realized that if it is that one of these values is negative, then I would have to subtract the 1, and the 3, otherwise it would do the opposite and make the speed slower, because I am adding a positive number to a negative number. 
