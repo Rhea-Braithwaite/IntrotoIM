@@ -323,7 +323,7 @@ void updateTime() {
 ````
 
 Gif Showing Time Display as well as Block Cracks
-![](images/Gamplay.gif)
+![](images/Gameplay.gif)
 
 #### Game Sounds
 I also added four different sounds to the game.
@@ -369,6 +369,7 @@ Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, t
 ````
 Gif Showing the Ball's Increase in Speed
 ![](images/IncreaseSpeed.gif)
+
 #### Reflections
 - Increasing the speed showed that there were errors in my collision code that need to be fixed. When the speed is increased, the ball no longer bounces when it immediately comes into contact with a block or the slide. Parts of the ball overlap with these objects before it bounces and sometimes the ball is stuck within the slider. So I need to fix those bugs.
 - Maybe I could add a sound at the beginning of the game, when the Instructions Screen and Welcome Screen are visible. 
