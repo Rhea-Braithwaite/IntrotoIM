@@ -408,9 +408,9 @@ I realized that the ball's speed had to increase by 1. The bigger the value that
 ````
 
 #### How To Play
-For the Instructions screen, which is required at the beginning of the game, I deciced to write the instructions in a textbox in word, and then save the textbox as an image. This image was then used within a PImage variable and simply displayed. I found this much easier, than manipulating text code. 
+For the Instructions screen, which is required at the beginning of the game, I deciced to write the instructions in a textbox in word, and then save the textbox as an image. This image was then used within a PImage variable and simply displayed. I found this much easier, than manipulating text code. Additionally, to make th background more interesting, I added an array of randomly placed small circles.
 
-Here is the Result
+Here is the Result.
 
 ![](images/HowToPlay.png)
 
@@ -424,6 +424,48 @@ Similarly, to the initial assignment that I did using Block Breaker, I used the 
 #### Reflections
 - Collision detection is a lot more difficult than I had anticipated. And my method does not provide the desired result
 - Making images of texts, is much easier than writing the code for the text line by line.
+
+
+## March 3, 2021
+
+### Accomplished Today:
+- Added a Screen that displays the level number
+- 
+
+#### Screen that Displays the Level Number
+To make the game more organized, I added an additional screen that dislays the specific level that the user is playing. Instead of it being a mouse event that determines where or not this screen then transitions to the level itself, I created a transparency variable that causes the Level Screen to slowly fade out until the level itself comes into view. At this point, again to make the background more interesting, the array of circles were again displayed.
+
+Code for Level Screen
+````
+void levelScreen(){
+  fill(0, transparency); // Colour the background black
+  rect(0,0, width, height); // Display a rectangle as the background
+  fill(colorOptions[currLevelIndex], transparency); // Select the colour based on the level
+  
+  for(int i = 0; i<NUMBEROFSTARS; i++){
+    circles[i].display(); // Display the background circles
+  }
+  
+  textSize(150);
+  textAlign(CENTER);
+  text("LEVEL", width/2, (height/2)-130);
+  text(currLevelIndex+1, width/2, (height/2)+100);
+}
+
+````
+
+#### 
+
+
+#### Background
+
+
+
+
+#### Reflections
+- Collision detection is a lot more difficult than I had anticipated. And my method does not provide the desired result
+- Making images of texts, is much easier than writing the code for the text line by line.
+
 
 
 
