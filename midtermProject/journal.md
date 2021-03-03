@@ -432,12 +432,15 @@ Similarly, to the initial assignment that I did using Block Breaker, I used the 
 - Added a Screen that displays the level number
 - Updated Collision Detection
 - Commented the Entire Code
+- Fixed Time
 
 #### Screen that Displays the Level Number
 To make the game more organized, I added an additional screen that dislays the specific level that the user is playing. Instead of it being a mouse event that determines where or not this screen then transitions to the level itself, I created a transparency variable that causes the Level Screen to slowly fade out until the level itself comes into view. At this point, again to make the background more interesting, the array of circles were again displayed.
 
 Code for Level Screen
+
 ````
+
 void levelScreen(){
   fill(0, transparency); // Colour the background black
   rect(0,0, width, height); // Display a rectangle as the background
@@ -459,6 +462,28 @@ void levelScreen(){
 
 #### Updated Collision Detection
 For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and this website on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
+
+#### Commented the Entire Code
+I then spent a bit of time adding the necessary comments to different sections of the code. Of particular importance was the collision section which can be a bit difficult to follow. 
+
+#### Fixed Time Again
+I then realized that my code for updating the time was not correct. THe seconds segment was growing bigger than 60 when that should not be happening. I initially tried using modulus but I found that was not working so I used basic math instead.
+
+````
+
+ void updateTime() { 
+   if(frames%60 == 0 && frames != 0){ // If frames is 60 and it s not the intial number of frames then a second has passed
+     seconds += 1;
+   }
+   
+   if(seconds == 60){ // If 60 seconds have passed
+     minutes +=1;
+     seconds = 0;
+   }
+ }
+
+````
+
 
 #### Reflections
 - 
