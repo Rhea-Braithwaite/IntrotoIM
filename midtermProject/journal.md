@@ -461,7 +461,7 @@ void levelScreen(){
 ![](images/LevelScreen.gif)
 
 #### Updated Collision Detection
-For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and this website on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
+For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and [this website](https://www3.ntu.edu.sg/home/ehchua/programming/java/J8a_GameIntro-BouncingBalls.html) on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
 
 ![](images/Collision2.gif)
 
@@ -488,7 +488,7 @@ I then realized that my code for updating the time was not correct. THe seconds 
 
 
 #### Reflections
-- 
+- Once again, collision could use work, but for now, the basic functionality is possible. And I am happy the ball no longer is overlapping with the different game objects. Unfortunately I do not think I will be able to find a solution before the deadline, but I hope I eventually will. 
 
 
 
