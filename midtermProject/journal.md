@@ -430,7 +430,8 @@ Similarly, to the initial assignment that I did using Block Breaker, I used the 
 
 ### Accomplished Today:
 - Added a Screen that displays the level number
-- 
+- Updated Collision Detection
+- Commented the Entire Code
 
 #### Screen that Displays the Level Number
 To make the game more organized, I added an additional screen that dislays the specific level that the user is playing. Instead of it being a mouse event that determines where or not this screen then transitions to the level itself, I created a transparency variable that causes the Level Screen to slowly fade out until the level itself comes into view. At this point, again to make the background more interesting, the array of circles were again displayed.
@@ -454,17 +455,11 @@ void levelScreen(){
 
 ````
 
-#### 
-
-
-#### Background
-
-
-
+#### Updated Collision Detection
+For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and this website on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
 
 #### Reflections
-- Collision detection is a lot more difficult than I had anticipated. And my method does not provide the desired result
-- Making images of texts, is much easier than writing the code for the text line by line.
+- 
 
 
 
