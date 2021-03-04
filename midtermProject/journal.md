@@ -168,8 +168,8 @@ if (level.blocks[i].show == true) { //If the block has not been destroyed yet
         //Check if the ball has hit the block
         if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){ 
           if (level.blocks[i].obstacle == false){ //Checks if the block is an obstacle
-            level.blocks[i].damage ++; //If it is not an obstacle, then increment the damage variable
-             if (level.blocks[i].damage == 3) { // If the damage variable is 3, then "destroy" the blok by not displaying it.
+            level.blocks[i].damage ++; //If it is not an obstacle, then increment the block's damage
+             if (level.blocks[i].damage == 3) { // If the damage variable is 3 (maximum damage), then "destroy" the block by not displaying it.
                level.blocks[i].show = false;
              }
           }         
