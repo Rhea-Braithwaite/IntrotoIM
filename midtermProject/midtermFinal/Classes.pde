@@ -386,7 +386,7 @@ class Ball {
           if (levels[currLevelIndex].blocks[i].obstacle == false){ //Checks if the block is not an obstacle
             levels[currLevelIndex].blocks[i].damage ++; //If it is not an obstacle, then increment the block's damage
             levels[currLevelIndex].updateScore(); 
-             if (levels[currLevelIndex].blocks[i].damage == 1) { // If the damage variable is 3 (maximum damage), then "destroy" the block by not displaying it.
+             if (levels[currLevelIndex].blocks[i].damage == 3) { // If the damage variable is 3 (maximum damage), then "destroy" the block by not displaying it.
                levels[currLevelIndex].blocks[i].show = false; 
                levels[currLevelIndex].blocksRemaining --; // Decrement the number of remaining blocks
                increaseSpeed();
