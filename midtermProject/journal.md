@@ -307,7 +307,7 @@ Damage = 2
 ![](images/Hit2.png)
 
 #### Added Time Display
-Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second.
+Additionally I added a display of the time it takes to complete a level during game play. Instead of having a single time variable I changed it to two variables, minutes and seconds. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second.
 
 ````
 void updateTime() {
