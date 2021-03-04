@@ -324,7 +324,7 @@ void updateTime() {
 
 Gif Showing Time Display as well as Block Cracks
 
-![](images/Gameplay.gif)
+![](images/gifs/Gameplay.gif)
 
 #### Game Sounds
 I also added four different sounds to the game.
@@ -370,7 +370,7 @@ Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, t
 ````
 Gif Showing the Ball's Increase in Speed
 
-![](images/IncreaseSpeed.gif)
+![](images/gifs/IncreaseSpeed.gif)
 
 #### Reflections
 - Increasing the speed showed that there were errors in my collision code that need to be fixed. When the speed is increased, the ball no longer bounces when it immediately comes into contact with a block or the slide. Parts of the ball overlap with these objects before it bounces and sometimes the ball is stuck within the slider. So I need to fix those bugs.
@@ -417,7 +417,7 @@ Here is the Result.
 #### Background
 Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
 
-![](images/Background.gif)
+![](images/gifs/Background.gif)
 
 
 
@@ -458,12 +458,12 @@ void levelScreen(){
 
 ````
 
-![](images/LevelScreen.gif)
+![](images/gifs/LevelScreen.gif)
 
 #### Updated Collision Detection
 For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and [this website](https://www3.ntu.edu.sg/home/ehchua/programming/java/J8a_GameIntro-BouncingBalls.html) on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
 
-![](images/Collision2.gif)
+![](images/gifs/Collision2.gif)
 
 #### Commented the Entire Code
 I then spent a bit of time adding the necessary comments to different sections of the code. Of particular importance was the collision section which can be a bit difficult to follow. 
