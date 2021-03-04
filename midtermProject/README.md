@@ -44,9 +44,9 @@ Lastly, the faster the each level is finished the better the score. So try to fi
 ![](images/LevelScreen.gif)
 
 ### Level Won
-
+![](images/LevelWon.png)
 ### Game Over
-![](images/LevelLost.png)
+![](images/GameOver.png)
 ### Game Won
 ![](images/GameWon.png)
 
