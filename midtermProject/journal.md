@@ -433,20 +433,21 @@ To make the game more organized, I added an additional screen that dislays the s
 Code for Level Screen
 
 ````
-
-void levelScreen(){
-  fill(0, transparency); // Colour the background black
-  rect(0,0, width, height); // Display a rectangle as the background
-  fill(colorOptions[currLevelIndex], transparency); // Select the colour based on the level
-  
-  for(int i = 0; i<NUMBEROFSTARS; i++){
-    circles[i].display(); // Display the background circles
+  if (gameWon == false){ // If game has not been won and level begins, display the level screen
+    fill(0, transparency); // Colour the background black
+    rectMode(CORNER);
+    rect(0,0, width, height); // Display a rectangle as the background
+    fill(colorOptions[currLevelIndex], transparency); // Select the colour based on the level
+    
+    for(int i = 0; i<NUMBEROFSTARS; i++){
+      circles[i].display(); // Display the background circles
+    }
+    
+    textSize(150);
+    textAlign(CENTER);
+    text("LEVEL", width/2, (height/2)-130);
+    text(currLevelIndex+1, width/2, (height/2)+100);
   }
-  
-  textSize(150);
-  textAlign(CENTER);
-  text("LEVEL", width/2, (height/2)-130);
-  text(currLevelIndex+1, width/2, (height/2)+100);
 }
 
 ````
