@@ -16,6 +16,9 @@ misses the slider and hits the bottom of the screen, a life is lost, and the bal
 balls speed increased. If a life is lost, then the speed is reset.
 - If the user wins all the levels, then a final congratulatory screen is displayed, and a Restart Button is displayed that the user can select to restart from Level 1. 
 
+## NOTE
+[Click Here](https://github.com/Rhea-Braithwaite/IntrotoIM/tree/main/February9) to see the inital Block Breaker that I did. This was used as the foundation and I built on it to create this new version. 
+
 ## February 22, 2021
 
 ### Accomplished Today:
@@ -198,11 +201,11 @@ Homescreen
 - Restart 
 
 #### Levels Class
-- Again, I realized that instead of having mutltiple lines of code, for each level, it made sense to have an array of levels, with a varibale tracking the current Level. So that is what I did. I created an array of levels, called levels, and added an integer variable currlevel, to track the current Level. 
+- Again, I realized that instead of having mutltiple lines of code, for each level, it made sense to have an array of levels, with a variable tracking the current Level. So that is what I did. I created an array of levels, called levels, and added an integer variable currlevel, to track the current Level. 
 - Whilst coding, I realized it would be better to have the variable instead be the currLevelIndex, because the variable is incremented at different points, so to prevent Array Index errors, I decided to use the variable as the index instead. 
-- I also had had, separate variables for the scores and lives for each variable, so I added those to the levels class, as well as a win variable to check if the level had been won. 
-- Additionally, to check if the level was won, I decided to check if the blocks Remaining were equal to zero, in other words if all blocks wer destoryed. But for levels 2 and 3, becuase their blocks involve the obstacles, I had to consider them in the calculation for the blocks remaining. 
-- and finally, to make it seem more like a fame, I added a time variable for the level, so the user can see how long it took to complete a level.
+- I also had had, separate variables for the scores and lives for each variable, so I added those to the levels class, as well as a win variable to track if the level had been won. 
+- Additionally, to check if the level was won, I decided to check if the blocks Remaining were equal to zero, in other words if all blocks were destoryed. But for levels 2 and 3, because their blocks involve the obstacles, I had to consider them in the calculation for the blocks remaining. 
+- And finally, to make it seem more like a game, I added a time variable for the level, so the user can see how long it took to complete a level.
 
 The following is the final product.
 
@@ -229,24 +232,12 @@ class Level {
   } 
 ````
 
-Code for collisison with block
-````
-if (level.blocks[i].show == true) { //If the block has not been destroyed yet
-        //Check if the ball has hit the block
-        if(x+radius >= level.blocks[i].x && x-radius <= (level.blocks[i].x + BLOCKWIDTH) && y+radius >= level.blocks[i].y && y-radius <= (level.blocks[i].y + BLOCKHEIGHT)){ 
-          if (level.blocks[i].obstacle == false){ //Checks if the block is an obstacle
-            level.blocks[i].damage ++; //If it is not an obstacle, then increment the damage variable
-             if (level.blocks[i].damage == 3) { // If the damage variable is 3, then "destroy" the blok by not displaying it.
-               level.blocks[i].show = false;
-             }
-          }         
-````
 #### Level Complete, Level Lost and Game Won Screens
-Level Lost - is displayed when all lives are lost on a level. The user must then begin again from level 1, hence the restart prompt
+Level Lost - is displayed when all lives are lost on a level. The user must then begin again from level 1, hence the restart prompt.
 ![](images/LevelLost.png)
 Note: Preliminary screen, that is why the score and time are zero.
 
-Level Complete - is displayed when the user has destoryed all the blocks on the level. Then there is a prompt to move on to the next level
+Level Complete - is displayed when the user has destroyed all the blocks on the level. Then there is a prompt to move on to the next level.
 ![](images/LevelComplete.png)
 Note: Preliminary screen, that is why the score and time are zero.
 
@@ -286,10 +277,11 @@ void resetLevels(){
  
 ````
 #### Reflections
-- I need to add the instructions screen to the beginning of the screen. I don't want to add it yet, in case my game design for some reason changes between now and the submission deadline. Plan - use an image because it is easier than using the text code in Processing
+- I need to add the instructions screen to the beginning of the screen. I don't want to add it yet, in case my game design for some reason changes between now and the submission deadline. Plan:    
+  - use an image because it is easier than using the text code in Processing
 - Maybe add a bit more to the Game Won screen. It seems a bit bland.
 - I continue to change foundational elements of my code. Try and write the pseudocode before I type it in Processing. 
-- Add the names of Each level to the Level Screen, so the user can know what level it is. Maybe then add the specific level that has been lost or completed to these screens respectively. 
+- Add the names of each level to the Game Screen, so the user can know what level it is. Maybe then add the specific level that has been lost or completed to these screens respectively. 
 
 ## March 1, 2021
 
@@ -315,7 +307,8 @@ Damage = 2
 ![](images/Hit2.png)
 
 #### Added Time Display
-Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second. 
+Additionally I added a display of the time it takes to complete a level during game play. I had tried to use the frameRate varibale to do the calculation, because it is the rate of the number of frames per second, but the seconds variable began fluctuating at certain points so I decided to use 60 and 3600 instead, given that the frameRate is 60 frames per second.
+
 ````
 void updateTime() {
   minutes = frames/3600;
@@ -334,7 +327,7 @@ I also added four different sounds to the game.
 - A sound for when the ball hits a block
 - And background music whilst a level is being played.
 
-I had to utilize additional boolean variables to determine if a sound had already been played, for example with the level completed screen, so as to not have an active repition each time the sound file was completed. 
+I had to utilize additional boolean variables to determine if a sound had already been played, for example with the Level Completed Screen, so as to not have an active repition each time the sound file was completed. 
 
 For example
 ````
@@ -347,7 +340,7 @@ if (win.isPlaying() == false && played == false){ //win is a soundFile for the l
 
 
 #### Increased Speed for Levels 2 and 3
-Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the ySpeed is increased by 1 and the xSpeed is increased by 3. Here I realized that if it is that one of these values is negative, then I would have to subtract the 1, and the 3, otherwise it would do the opposite and make the speed slower, because I am adding a positive number to a negative number. 
+Lastly, to make levels 2 and 3 more difficult, each time a brick is destroyed, the xSpeed is increased by 1 and the ySpeed is increased by 3. Here I realized that if it is that one of these values is negative, then I would have to subtract the 1, and the 3, otherwise it would do the opposite and make the speed slower, because I am adding a positive number to a negative number. 
 
 ````
   void increaseSpeed(){
@@ -385,7 +378,7 @@ Gif Showing the Ball's Increase in Speed
 - Background
 
 #### Updated the Increase Speed of the Ball
-I realized that the ball's speed had to increase by 1. The bigger the value that the speed incremented by, the more the ball overlapped with the blocks and the slider. The condition to decide if there is a collision, conisder's if the ball's edge is inside the block. By increasing the value of the speed this is therefore more likel. Thus, to minimize overlapping, the incrementing value was made 1. It took a while to figure this out.  
+I realized that the ball's speed had to increase by 1. The bigger the value that the speed incremented by, the more the ball overlapped with the blocks and the slider. The condition to decide if there is a collision, consider's if the ball's edge is inside the block. By increasing the value of the speed this is therefore more likely. Thus, to minimize overlapping, the incrementing value was made 1. It took a while to figure this out.  
 
 ````
   void increaseSpeed(){
@@ -419,7 +412,6 @@ Here is the Result.
 Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
 
 ![](images/gifs/Background.gif)
-
 
 
 #### Reflections
@@ -462,7 +454,7 @@ void levelScreen(){
 ![](images/gifs/LevelScreen.gif)
 
 #### Updated Collision Detection
-For my collision detection, as mentioned before, the more the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and [this website](https://www3.ntu.edu.sg/home/ehchua/programming/java/J8a_GameIntro-BouncingBalls.html) on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
+For my collision detection, as mentioned before, as the speed becomes larger, the more the ball begins to overlap with the blocks. This also happened with the slider. To improve on this, I decided to change the code, and instead have that if the ball collides with the block or slider, the edge that it collides with is now the new ball position. This prevents the overlapping of the game objects as well as prevents the ball from ending up inside the different objects. It took a while to figure this out and [this website](https://www3.ntu.edu.sg/home/ehchua/programming/java/J8a_GameIntro-BouncingBalls.html) on bouncing balls also helped. In all honesty, the code is not perfect, because for the block corners, if you pay close attention you can see the shift in the y position. However, it is a much better improvement than what I had before, and is an area in which I can work on in the future.
 
 ![](images/gifs/Collision2.gif)
 
@@ -490,6 +482,21 @@ I then realized that my code for updating the time was not correct. THe seconds 
 
 #### Reflections
 - Once again, collision could use work, but for now, the basic functionality is possible. And I am happy the ball no longer is overlapping with the different game objects. Unfortunately I do not think I will be able to find a solution before the deadline, but I hope I eventually will. 
+
+## March 4, 2021
+
+### Accomplished Today:
+- Changed the Background Colour of the Start Screen
+
+#### Changed the Background Colour of the Start Screen
+I felt that the Start Screen was a bit bland so I decided to change the background colour to orange and have the array of circles be displayed again, to give things a bit more life.
+
+![](images/StartScreen2.png)
+#### Reflections
+- And that's the last change. I am happy with the game turned out. 
+
+
+
 
 
 
