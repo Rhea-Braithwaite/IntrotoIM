@@ -26,7 +26,7 @@ int minutes, seconds;
 int textY=45; 
 int transparency = 255;
 int totLevels = 3;
-int currLevelIndex = 2;
+int currLevelIndex = 0;
 
 final int NUMBEROFSTARS = 300;
 
