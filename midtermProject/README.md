@@ -29,7 +29,7 @@ Levels 2 and 3 include obstacles, which are the red blocks, that the ball only b
 ### Increasing Speed
 Also, for Levels 2 and 3, after a block is destroyed the ball's speed begins to increase, so be careful.
 
-## Time Bonus
+### Time Bonus
 Lastly, the faster the each level is finished the better the score. So try to finish as quickly as possible.
 
 
