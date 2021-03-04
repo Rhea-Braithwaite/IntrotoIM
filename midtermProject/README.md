@@ -41,19 +41,20 @@ Lastly, the faster the each level is finished the better the score. So try to fi
 ![](images/StartScreen2.png)
 
 ### Level Screen
-![](images/LevelScreen.gif)
+![](images/gifs/LevelScreen.gif)
 
 ### Game Play - Level 1
-![](images/Level1.gif)
+![](images/gifs/Level1.gif)
 
 ### Game Play - Level 2
-![](images/Collision2.gif)
+![](images/gifs/Collision2.gif)
 
 ### Game Play - Level 3
-![](images/Level3.gif)
+![](images/gifs/Level3.gif)
 
 ### Level Won
 ![](images/LevelWon.png)
+
 ### Game Over
 ![](images/GameOver.png)
 
