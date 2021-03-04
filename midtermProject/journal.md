@@ -408,11 +408,11 @@ I realized that the ball's speed had to increase by 1. The bigger the value that
 ````
 
 #### How To Play
-For the Instructions screen, which is required at the beginning of the game, I deciced to write the instructions in a textbox in word, and then save the textbox as an image. This image was then used within a PImage variable and simply displayed. I found this much easier, than manipulating text code. Additionally, to make th background more interesting, I added an array of randomly placed small circles.
+For the Instructions screen, which is required at the beginning of the game, I deciced to write the instructions in a textbox in word, and then save the textbox as an image. This image was then used within a PImage variable and simply displayed. I found this much easier, than manipulating text code. Additionally, to make the background more interesting, I added an array of randomly placed small circles.
 
 Here is the Result.
 
-![](images/Instructions.png)
+![](images/HowtoPlay.png)
 
 #### Background
 Similarly, to the initial assignment that I did using Block Breaker, I used the stars as a background. I made them much thinner this time so as to get a more shooting star like display. This involved creating a Stars Class and an array of stars, which were shifted along the screen, displayed, and when they reached the end of the screen their position was reset. 
