@@ -8,7 +8,11 @@ game begins again from Level 1.
 
 ## How to Play
 ### Overview
-At the beginning of each level, press the mouse the get the ball moving, when the level number is no longer visible. Then use the mouse to guide the slider to the left and right. Use the slider to bounce the ball to hit another block. If the ball misses the slider and hits the bottom edge of the screen, a life is lost. Each level has 3 Lives. If all lives are lost before the level is completed, then the game begins again from Level 1, so be careful.
+At the beginning of each level, press the mouse the get the ball moving, when the level number is no longer visible. Then use the mouse to guide the slider to the left and right. Use the slider to bounce the ball to hit another block. If the ball misses the slider and hits the bottom edge of the screen, a life is lost and the ball and slider’s position is reset. Each level has 3 Lives. If all lives are lost before the level is completed, then the game begins again from Level 1, so be careful.
+
+If the user wins the level, a congratulations screen is displayed, with a mouse prompt to move on to the next level.
+
+If the user wins all the levels, then a final congratulatory screen is displayed, with a mouse prompt to move on to the next level to restart from Level 1.
 
 ### Destroying a Block
 It takes 3 hits from the ball to destory a block.
