@@ -43,10 +43,13 @@ Lastly, the faster the each level is finished the better the score. So try to fi
 ### Level Screen
 ![](images/LevelScreen.gif)
 
+### Game Play
+![](images/Collision2.gif)
 ### Level Won
 ![](images/LevelWon.png)
 ### Game Over
 ![](images/GameOver.png)
+
 ### Game Won
 ![](images/GameWon.png)
 
