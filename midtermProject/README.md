@@ -34,6 +34,14 @@ Lastly, the faster the each level is finished the better the score. So try to fi
 
 
 ## Game Stages
+### How to Play Screen
+![](images/HowtoPlay.png)
+
+### Start Screen
+![](images/StartScreen2.png)
+
+### Level Screen
+![](images/LevelScreen.gif)
 
 ## Major Problems and Modifications
 - My most difficult problem was the collision detection. I have lost count of the different solutions I tried to see if it would work. When the change in the speed is only 1, my inital code of detecting an overlap between the ball and the slider as well as the ball and the level blocks, was sound. However, because the speeds for Levels 2 and 3 increase once a block is destroyed, the greater the value of the speed, the more the ball overalps with the game objects, and eventually the ball would end up inside the object and glitch. So I had to find a different solution.
