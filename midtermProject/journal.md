@@ -187,7 +187,8 @@ Homescreen
 ![](images/Homescreen.png)
 
 #### Reflections
-- Since the game is to begin with the instructions, the help button that was added to the home screen is no longer required. 
+- Since the game is to begin with the instructions, the help button that was added to the home screen is no longer required. So I need to add an additional screen at the beginning
+- Since text is difficult to handle, then using an image for the instructions may be helpful.
 
 ## February 27, 2021
 
