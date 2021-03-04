@@ -43,6 +43,13 @@ Lastly, the faster the each level is finished the better the score. So try to fi
 ### Level Screen
 ![](images/LevelScreen.gif)
 
+### Level Won
+
+### Game Over
+![](images/LevelLost.png)
+### Game Won
+![](images/GameWon.png)
+
 ## Major Problems and Modifications
 - My most difficult problem was the collision detection. I have lost count of the different solutions I tried to see if it would work. When the change in the speed is only 1, my inital code of detecting an overlap between the ball and the slider as well as the ball and the level blocks, was sound. However, because the speeds for Levels 2 and 3 increase once a block is destroyed, the greater the value of the speed, the more the ball overalps with the game objects, and eventually the ball would end up inside the object and glitch. So I had to find a different solution.
   - The best solution I found, was to make the ball center position the radius distance from the block and slider, whenever it collided with these objects. This solution is not perfect however, because for the corners if the center position of the circle is changed the, change is visible. 
