@@ -20,7 +20,7 @@ Next I used the schematic to start building the circuit
 
 - First I added the three switches. The numbering begins from the bottom, therefore Red Switch = 1, Yellow Switch = 2, Green Switch = 3.
 
-![](images/switches.jpg)
+![](images/switch.jpg)
 
 - Then I added the Ground and 5 V wires, and connected the 5V wires to each switch
 - Then I added the input wires for the switches and connected them to Arduino
