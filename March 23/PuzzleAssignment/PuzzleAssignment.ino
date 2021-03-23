@@ -34,7 +34,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(pos < TOT){
+  if(pos < TOT){ // If puzzle has not been solved
     if( digitalRead(SWITCH1) == HIGH ){ // Switch 1 is pressed
       check(1);
     }
