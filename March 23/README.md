@@ -15,7 +15,7 @@ can then begin the puzzle again.
 ## Process
 The first thing I did for the puzzle, was come up with the general idea. Then I considered how many switches, LEDS, and wires I needed, as well as the corresponding
 input and output ports on Arduino that had to be used. From this I then came up with a preliminary schematic. 
-
+![](images/schematicdraft.jpg)
 Next I used the schematic to start building the circuit
 
 - First I added the three switches. The numbering begins from the bottom, therefore Red Switch = 1, Yellow Switch = 2, Green Switch = 3.
