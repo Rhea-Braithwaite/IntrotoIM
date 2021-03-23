@@ -56,6 +56,7 @@ And here is the final circuit:
 ![](images/circuitfinal.jpg)
 
 Next up we have a video demonstration:
+
 [Click Link](https://youtu.be/xk6yf8KRF3Q) to see video for the puzzle game
 
 ## Takeaways
