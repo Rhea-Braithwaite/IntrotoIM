@@ -40,10 +40,9 @@ Next up was the code.
 - I used a predefined array of numbers fro the patterns, so I could test to see if the code was written properly and if the circuit was connected properly. 
 - After debugging, this was changed to an empty array that was to be filled with random integers, from 1 to 3, in setup.  
 
-After writing the code, I uploaded it to Arduino and immediately met a problem: The circuit had power but it was not reaching the LEDs. Here I realized that I connected
-the LEDs and the resistors incorrectly. I forgot that the negative (shorter) part of the LED had to be connected to the resistor. So I switched around all the switches and we had power!
-
-However, I then encountered another problem. Only the green LED was flashing even if an incorrect switch was pressed. I figured out that this was because in my code, my if condition had 1 equal sign instead of 2, and then once that was changed the code worked. 
+## Problems
+- After writing the code, I uploaded it to Arduino and immediately met a problem: The circuit had power but it was not reaching the LEDs. Here I realized that I connected the LEDs and the resistors incorrectly. I forgot that the negative (shorter) part of the LED had to be connected to the resistor. So I switched around all the switches and we had power!
+- However, I then encountered another problem. Only the green LED was flashing even if an incorrect switch was pressed. I figured out that this was because in my code, my if condition had 1 equal sign instead of 2, and then once that was changed the code worked. 
 
 And here is the final circuit:
 
@@ -51,4 +50,8 @@ And here is the final circuit:
 
 Next up we have a video demonstration:
 [Click Link](https://youtu.be/xk6yf8KRF3Q) to see video for the puzzle game
+
+## Takeaways
+- Ensure the resistor and LEDs are connected properly
+- Organisation is key, so as to not have your scircuit become extremely confusing
 
