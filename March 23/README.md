@@ -43,5 +43,9 @@ Next up was the code.
 After writing the code, I uploaded it to Arduino and immediately met a problem: The circuit had power but it was not reaching the LEDs. Here I realized that I connected
 the LEDs and the resistors incorrectly. I forgot that the negative (shorter) part of the LED had to be connected to the resistor. So I switched around all the switches and we had power!
 
-However, I then encountered another problem. Only the green LED was flashing even if an incorrect switch was pressed. I figured out that this was because in my code, by if condition
-had 1 equal sign instead of 2, and then once that was changed the code worked. 
+However, I then encountered another problem. Only the green LED was flashing even if an incorrect switch was pressed. I figured out that this was because in my code, my if condition had 1 equal sign instead of 2, and then once that was changed the code worked. 
+
+And here is the final circuit:
+
+![](images/circuitfinal.jpg)
+
