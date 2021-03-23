@@ -32,9 +32,11 @@ Next I used the schematic to start building the circuit
 
 - Then I added the LEDS and their corresponding resistors. To organise them in an attractive way, I placed the three Blue LEDS to the right, and the Red and Green LEDs to the left. 
 
-![](images/circuit.jpg)
+![](images/leds.jpg)
 
 - Therefore I had to add another ground wire, to connect the resistors to ground. I also added the wires for each LED and connected them to Arduino
+
+![](images/leds2.jpg)
 
 And thus my circuit was finished (Or so I thought)
 
