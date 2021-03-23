@@ -27,6 +27,9 @@ Next I used the schematic to start building the circuit
 ![](images/switches2.jpg)
 
 - Then I added the resistors for each switch and connected them to ground.(In hindshight I maybe should have added these before the wires)
+
+![](images/switches3.jpg)
+
 - Then I added the LEDS and their corresponding resistors. To organise them in an attractive way, I placed the three Blue LEDS to the right, and the Red and Green LEDs to the left. Therefore I had to add another ground wire, to connect the resistors to ground.
 - Then I added the wires for each LED and connected them to Arduino
 
