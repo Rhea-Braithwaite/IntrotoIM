@@ -19,6 +19,9 @@ input and output ports on Arduino that had to be used. From this I then came up 
 Next I used the schematic to start building the circuit
 
 - First I added the three switches. The numbering begins from the bottom, therefore Red Switch = 1, Yellow Switch = 2, Green Switch = 3.
+
+![](images/switches.jpg)
+
 - Then I added the Ground and 5 V wires, and connected the 5V wires to each switch
 - Then I added the input wires for the switches and connected them to Arduino
 - Then I added the resistors for each switch and connected them to ground.(In hindshight I maybe should have added these before the wires)
