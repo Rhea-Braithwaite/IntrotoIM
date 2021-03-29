@@ -14,7 +14,7 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
  - Firstly, I created a draft schematic draft for my circuit
  - Then I added the switch
 
-![](images/switch.jpg)
+![](images/LDR.jpg)
 
  - Then I added the LDR
  - Then I added the LEDS
