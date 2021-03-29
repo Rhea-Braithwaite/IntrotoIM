@@ -12,6 +12,10 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 
 ### Process
  - Firstly, I created a draft schematic draft for my circuit
+ - Then I added the switch
+
+![](images/switch.jpg)
+
  - Then I added the LDR
  - Then I added the LEDS
  - Then the resistors were added for the LEDs, the LDR and the switch
