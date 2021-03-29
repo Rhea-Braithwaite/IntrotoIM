@@ -75,8 +75,8 @@ Additionally, I used a function flash that iterated through the arays and did th
 #### Problems
 I did not have any problems when building my circuit but I did encounter a few problems with my code
 
-- First and foremost and with that of the for loop. I was trying to figure out a way to find the length of 
-the array. Using array.length did not work. I found out that for Arduino, you have to use the sizeof() function but this returns the number of bytes in the array.
+- First and foremost, I had a problem figuring out the length of the array to use in the for loop: I tried using array.length but it did not work. 
+-   Solution: I found out that for Arduino, you have to use the sizeof() function but this returns the number of bytes in the array.
 For integers, each number is 2 bytes, so when using sizeof, it is necessary to divide by an element in the array, to get the correct calculation.
 So the code was (sizeof(array))/ array[0]. I'm not sure why but this still did not work for me. The for loop only ran once. 
 So instead, I passed the array size to the function and used that as the restriction for the for loop.
