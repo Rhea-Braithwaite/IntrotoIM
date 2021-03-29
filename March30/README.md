@@ -81,6 +81,5 @@ For integers, each number is 2 bytes, so when using sizeof, it is necessary to d
 So the code was (sizeof(array))/ array[0]. I'm not sure why but this still did not work for me. The for loop only ran once. 
 So instead, I passed the array size to the function and used that as the restriction for the for loop.
 
-- Additionally, in the beginning, as you will see in the photos, I was using a Blue and Red LED for the Morse Code flashing, and a 
-Green LED, as the time of day indicator. But when testing I realized it was very dim showing in brighness that effectively,
-so I switched it and the Blue LED which was a better substitution.
+- Additionally, I had an issue with the dimness of the Green LED: In the beginning, as you will see in the photos, I was using a Blue and Red LED for the Morse Code flashing, and a Green LED, as the time of day indicator. But when testing I realized it was very dim showing in brighness that effectively.
+  - Solution: I switched the Green LED and the Blue LED which was a better substitution.
