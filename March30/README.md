@@ -21,6 +21,9 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 ![](images/LDR.jpg)
 
  - Then I added the LEDS
+
+![](images/LDR.jpg)
+
  - Then the resistors were added for the LEDs, the LDR and the switch
  - Afterwards I added the wires for th resistors and connected them to the Arduino
  - Then I added the wires for the LDR and the switch
