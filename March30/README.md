@@ -22,7 +22,7 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 
  - Then I added the LEDS
 
-![](images/LDR.jpg)
+![](images/LED.jpg)
 
  - Then the resistors were added for the LEDs, the LDR and the switch
 
