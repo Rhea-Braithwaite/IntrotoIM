@@ -25,7 +25,8 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
   - 2 : A dash
   - 3 : A space
 
-These were then used in a for loop with if conditions to determine which LED was to be flashed
+These were then used in a for loop with if conditions to determine which LED was to be flashed. Additionally, I used a function flash that iterated through the arays and did the necessary flashing. 
+
 ````
   //flash the morse code depending the array element
   for (int i = 0; i < len; i++){
