@@ -30,10 +30,15 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 
  - Afterwards I added the wires for the resistors and connected them to the Arduino
 
-
+![](images/wires1.jpg)
 
  - Then I added the wires for the LDR and the switch
+
+![](images/wires2.jpg)
+
  - And lastly, I added the ground and 5 Volts wires.
+ 
+ ![](images/wires3.jpg)
  
  ### Writing the Code
  For the code, I used three arrays for each word, with integers corresponding to the different components of the Morse Code
