@@ -1,6 +1,6 @@
 ## ARDUINO CREATIVE ASSIGNMENT - MARCH 30, 2021
 Description: For this week's assignment I decided to do a Morse Code inspired Circuit. The circuit has 3 LEDS, a switch and a LDR. The overall concept is that 
-depending on the light presence in the room, the the Green and Red LEDs flash a word in Morse Code. The Red LED represents
+depending on the light presence in the room, the Green and Red LEDs flash a word in Morse Code. The Red LED represents
 the dots and the Green LED represents the dashes in Morse Code. So if there is a lot of light in the room, ie day, the word
 "sun" is flashed using Morse Code. If there is little light in the room, ie night, the word "moon" is flashed in Morse Code.
 To signal that the word is about to be flashed, both LEDs blink twice. If the switch is pressed, the word "eclipse" is flashed.
@@ -26,7 +26,27 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
   - 3 : A space
 
 These were then used in a for loop with if conditions to determine which LED was to be flashed
-"code"
+````
+  //flash the morse code depending the array element
+  for (int i = 0; i < len; i++){
+    
+    if(morseCode[i] == DOT){
+      digitalWrite(REDLED, HIGH);
+      delay(delay1);
+      digitalWrite(REDLED, LOW);
+    }
+    else if (morseCode[i] == DASH){
+      digitalWrite(GREENLED, HIGH);
+      delay(delay2);
+      digitalWrite(GREENLED, LOW);      
+    }
+    else if (morseCode[i] == SPACE){
+      delay(delay2);
+    }
+    delay(delay1);
+    
+  }
+````
 
 Additionally, I used a function flash that iterated through the arays and did the necessary flashing
 
