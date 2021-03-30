@@ -103,3 +103,4 @@ And here are the Official Schematic and Circuit Board
 
 ## Takeaways
 - The certain LEDs and their brightness are more suitable for certain tasks than others
+- Determining the length of an array is found using sizeof(array)/array[0], as sizeof returns the number of bytes
