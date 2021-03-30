@@ -44,7 +44,9 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
  ![](images/wires3.jpg)
  
  ### Writing the Code
- For the code, I used three arrays for each word, with integers corresponding to the different components of the Morse Code
+The words were found using the website [Morse Code Translator](https://morsecode.world/international/translator.html). All I had to do was type in the word, and it returned it in Morse Code with dots and dashes.
+
+For the code, I used three arrays for each word, with integers corresponding to the different components of the Morse Code
   - 1 : A dot
   - 2 : A dash
   - 3 : A space
