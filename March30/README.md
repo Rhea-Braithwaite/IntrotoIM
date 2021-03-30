@@ -31,7 +31,7 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 
 ![](images/resistors.jpg)
 
- - Afterwards I added the wires for the resistors and connected them to the Arduino
+ - Afterwards I added the wires for the LEDs and connected them to the Arduino
 
 ![](images/wires1.jpg)
 
