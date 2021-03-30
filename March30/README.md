@@ -75,8 +75,6 @@ These were then used in a for loop with if conditions to determine which LED was
   }
 ````
 
-Additionally, I used a function flash that iterated through the arays and did the necessary flashing
-
 #### Problems
 I did not have any problems when building my circuit but I did encounter a few problems with my code
 
