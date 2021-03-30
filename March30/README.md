@@ -86,3 +86,12 @@ So instead, I passed the array size to the function and used that as the restric
 
 - Additionally, I had an issue with the dimness of the Green LED: In the beginning, as you will see in the photos, I was using a Blue and Red LED for the Morse Code flashing, and a Green LED, as the time of day indicator. But when testing I realized it was very dim showing in brighness that effectively.
   - Solution: I switched the Green LED and the Blue LED which was a better substitution.
+
+
+And here are the Official Schematic and Circuit Board
+
+#### Schematic
+
+ ![](images/schematic.jpg)
+ 
+#### Circuit Board
