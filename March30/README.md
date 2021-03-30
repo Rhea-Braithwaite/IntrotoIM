@@ -95,3 +95,11 @@ And here are the Official Schematic and Circuit Board
  ![](images/schematic.jpg)
  
 #### Circuit Board
+
+ ![](images/circuit.jpg)
+ 
+#### Video Demonstration
+[Click Link](https://youtu.be/MUw42j5mNzg) to see video for this week's project
+
+## Takeaways
+- The certain LEDs and their brightness are more suitable for certain tasks than others
