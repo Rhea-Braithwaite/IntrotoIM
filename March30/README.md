@@ -12,6 +12,9 @@ Lastly, there is a Blue LED, that indicates what word is being blinked.
 
 ### Process
  - Firstly, I created a draft schematic draft for my circuit
+
+ ![](images/schematicdraft.jpg)
+ 
  - Then I added the switch
 
 ![](images/switch.jpg)
