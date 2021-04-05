@@ -39,3 +39,8 @@ The circuit was a bit more complicated this week, particularly because I was usi
 
 I had to take off the pieces quite a few times to find a good layout for everything.
 
+
+## Challenges
+ - Connecting the Ultrasonic sensor properly: It took be quite a bit of time to figure out how to setup the sensor and correct my code to match it. Initally when
+ I uploaded the code, no distance was being measured. 
+    - Solution: To figure out the problem, I looked in the Arduino examples for the Sensor example, and used that as a test for what I was doing wrong. It turns out that I had not put in the echo pin in Input mode, and I had set the ping Pin as output in setup. So by following the Arduino example I was able to figure out the 
