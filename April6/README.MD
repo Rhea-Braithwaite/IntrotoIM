@@ -113,3 +113,7 @@ I had to take off the pieces quite a few times to find a good layout for everyth
    - Solution: Place the function to determine the  pitch outside of the if condition, so on each loop it is called. Then to play the note, place this inside the if contition that is triggered when a switch is pressed and it is the correct time to play a note.
  - One final problem that I had was that when I settng up the circuit, I found the toner kept on making sounds even through no switch was being pressed.
    - Solution: It turns out that I had put the voltage wire in the same row as the input wire to the Arduino. After removing it from that row, the toner stopped making the sounds. 
+
+
+## Demo
+Here is the link for my project demo: ![Click Here](https://youtu.be/F9fqU8s1q_M)
