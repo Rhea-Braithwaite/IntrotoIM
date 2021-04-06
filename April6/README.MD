@@ -72,8 +72,16 @@ The circuit was a bit more complicated this week, particularly because I was usi
 ![](images/circuit2.jpg)
 
 - Next up were the resistors for all the switches and the LEDs
+
+![](images/resistors.jpg)
+
 - Then I added the 5 Volts and GND Wires
+
+![](images/wires1.jpg)
+
 - And lastly I added the wires to connect to the Arduino pins.
+
+![](images/wires2.jpg)
 
 I had to take off the pieces quite a few times to find a good layout for everything.
 
