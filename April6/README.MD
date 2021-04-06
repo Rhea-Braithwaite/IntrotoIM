@@ -117,3 +117,10 @@ I had to take off the pieces quite a few times to find a good layout for everyth
 
 ## Demo
 Here is the link for my project demo: [Click Here](https://youtu.be/F9fqU8s1q_M)
+Here is the link for a demo plus a project explanantion: [Click Here](https://youtu.be/_XoXh3JN6Ng)
+
+## Final Product
+
+### Schematic
+
+### Circuit Board
