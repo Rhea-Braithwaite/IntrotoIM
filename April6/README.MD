@@ -33,7 +33,27 @@ The code was a bit of trial and error. I tried to be as object oriented as possi
 to store the musical notes and another for the classes.
 I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. And to determine the distance, I converted the duration of the ultrasonic output to inches, and then I constrained the value within the range for the pitches. From there I mapped the note based on the switch selection to certain indexes of the array using this distance.
 
-
+````
+  //flash the morse code depending the array element
+  for (int i = 0; i < len; i++){
+    
+    if(morseCode[i] == DOT){
+      digitalWrite(REDLED, HIGH);
+      delay(delay1);
+      digitalWrite(REDLED, LOW);
+    }
+    else if (morseCode[i] == DASH){
+      digitalWrite(GREENLED, HIGH);
+      delay(delay2);
+      digitalWrite(GREENLED, LOW);      
+    }
+    else if (morseCode[i] == SPACE){
+      delay(delay2);
+    }
+    delay(delay1);
+    
+  }
+````
 ### Circuit
 The circuit was a bit more complicated this week, particularly because I was using circuit elements that I had not used before. 
  - I started by adding the three switches
