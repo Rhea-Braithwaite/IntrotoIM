@@ -33,6 +33,10 @@ The code was a bit of trial and error. I tried to be as object oriented as possi
 to store the musical notes and another for the classes.
 I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. And to determine the distance, I converted the duration of the ultrasonic output to inches, and then I constrained the value within the range for the pitches. From there I mapped the note based on the switch selection to certain indexes of the array using this distance.
 
+For help I looked at:
+ - [Play a Melody](https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody) on the Arduino Website
+ - This [tutorial](https://www.tutorialspoint.com/arduino/arduino_ultrasonic_sensor.htm) on Ultrasonic Sensors
+ - As well as the [without delay](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all) example we looked at in class
 ````
     void NotePitch() {
       if (sendSignal == true) { // Send outgoing signal from ping Pin
@@ -113,6 +117,7 @@ I had to take off the pieces quite a few times to find a good layout for everyth
    - Solution: Place the function to determine the  pitch outside of the if condition, so on each loop it is called. Then to play the note, place this inside the if contition that is triggered when a switch is pressed and it is the correct time to play a note.
  - One final problem that I had was that when I settng up the circuit, I found the toner kept on making sounds even through no switch was being pressed.
    - Solution: It turns out that I had put the voltage wire in the same row as the input wire to the Arduino. After removing it from that row, the toner stopped making the sounds. 
+ - I also had the problem where the notes were playing twice, but I could never figure out why that was.
 
 
 ## Demo
