@@ -60,6 +60,7 @@ The circuit was a bit more complicated this week, particularly because I was usi
     - The Green for the note A
     - The Yellow for note B
     - The Red for note C
+   ![]
 - Then I added the toner, the ultrasonic sensor, and the toggle switch.
 - Then I added the red and blue LEDs
 - Next up were the resistors for all the switches and the LEDs
