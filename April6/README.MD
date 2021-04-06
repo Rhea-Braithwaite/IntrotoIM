@@ -6,7 +6,13 @@ For this week's assignment I decided to do a multi-purposed musical instrument. 
  - Change pitch using an ultrasonic sensor
  - And provides a constant beat using the servo
 
+To use the instrument, your hand is used as a measure to determine the pitch. The closer it is to the ultrasonic sensor, the lower the pitch and further away, the higher it is. There are four levels, and to see what level you are on, look at the Blue LED, as it will be flashing it. 
+ - Pitch 1: LED flashes once
+ - Pitch 2: LED flashes twice
+ - Pitch 3: LED flashes three times
+ - Pitch 4: :ED flashes four times
 
+For the constant beat, when the serving is moving, ie. the toggle switch is one, the Red LED continues flashing, until the toggle switch is turned off.
 ## Process
 
 ### Thought Process
@@ -24,7 +30,9 @@ will continue.
 
 ### Code
 The code was a bit of trial and error. I tried to be as object oriented as possible, so I utilized functions, as well as classes, and different Arduino tabs: One
-to store the musical notes and another or the classes.
+to store the musical notes and another for the classes.
+I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. 
+
 
 ### Circuit
 The circuit was a bit more complicated this week, particularly because I was using circuit elements that I had not used before. 
@@ -33,7 +41,8 @@ The circuit was a bit more complicated this week, particularly because I was usi
     - The Yellow for note B
     - The Red for note C
 - Then I added the toner, the ultrasonic sensor, and the toggle switch.
-- Next up were the resistors for all the switches
+- Then I added the red and blue LEDs
+- Next up were the resistors for all the switches and the LEDs
 - Then I added the 5 Volts and GND Wires
 - And lastly I added the wires to connect to the Arduino pins.
 
