@@ -34,25 +34,42 @@ to store the musical notes and another for the classes.
 I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. And to determine the distance, I converted the duration of the ultrasonic output to inches, and then I constrained the value within the range for the pitches. From there I mapped the note based on the switch selection to certain indexes of the array using this distance.
 
 ````
-  //flash the morse code depending the array element
-  for (int i = 0; i < len; i++){
+ void NoteFrequency() {
+      if (sendSignal == true) { // Send outgoing signal from ping Pin
+        pinMode(pingPin, OUTPUT);
+        digitalWrite(pingPin, LOW);
+        delay(2);
+        digitalWrite(pingPin, HIGH);
+        timeSignalSent = millis();
+        sendSignal = false;
+      }
+      unsigned long currMillis = millis();
+
+      if(currMillis - timeSignalSent >= interval){ // Time to read incoming signal
+        digitalWrite(pingPin, LOW);
+        pinMode(echoPin, INPUT);
+        duration = pulseIn(echoPin, HIGH); // Measure the time it takes for outgoing signal to echo
+        distance = duration / 74 / 2; // convert from microseconds to inches
+        distance = constrain(distance, 0, 4); // Limit the distance to the pitch range
+        sendSignal = true;
+      }
+    }    
     
-    if(morseCode[i] == DOT){
-      digitalWrite(REDLED, HIGH);
-      delay(delay1);
-      digitalWrite(REDLED, LOW);
+    void Pitch(int note) { // Determine the notes to be played based on the switch selected and the pitch (distance)
+      if (distance == 1) {
+        index = note;
+      }
+      else if (distance == 2){
+        index = map(note, 0, 2, 3, 5); 
+      }
+      else if (distance == 3){
+        index = map(note, 0, 2, 6, 8);
+      }
+      else if (distance == 4){
+        index = map(note, 0, 2, 9, 11);
+      }
+      tone(TONER, melody[index], noteDuration); // Play note
     }
-    else if (morseCode[i] == DASH){
-      digitalWrite(GREENLED, HIGH);
-      delay(delay2);
-      digitalWrite(GREENLED, LOW);      
-    }
-    else if (morseCode[i] == SPACE){
-      delay(delay2);
-    }
-    delay(delay1);
-    
-  }
 ````
 ### Circuit
 The circuit was a bit more complicated this week, particularly because I was using circuit elements that I had not used before. 
