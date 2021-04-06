@@ -123,5 +123,10 @@ Here is the link for a demo plus a project explanantion: [Click Here](https://yo
 ## Final Product
 
 ### Schematic
+![](images/Schematic.jpg)
 
 ### Circuit Board
+![](images/circuitBoard.jpg)
+
+### Musical Instrument
+![](images/musicalInstrument.jpg)
