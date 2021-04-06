@@ -34,7 +34,7 @@ to store the musical notes and another for the classes.
 I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. And to determine the distance, I converted the duration of the ultrasonic output to inches, and then I constrained the value within the range for the pitches. From there I mapped the note based on the switch selection to certain indexes of the array using this distance.
 
 ````
- void NoteFrequency() {
+    void NotePitch() {
       if (sendSignal == true) { // Send outgoing signal from ping Pin
         pinMode(pingPin, OUTPUT);
         digitalWrite(pingPin, LOW);
@@ -50,22 +50,22 @@ I used an array for the notes, similar to the Arduino example. Initially, becaus
         pinMode(echoPin, INPUT);
         duration = pulseIn(echoPin, HIGH); // Measure the time it takes for outgoing signal to echo
         distance = duration / 74 / 2; // convert from microseconds to inches
-        distance = constrain(distance, 0, 4); // Limit the distance to the pitch range
+        pitch = constrain(distance, 0, 4); // Limit the distance to the pitch range
         sendSignal = true;
       }
     }    
     
-    void Pitch(int note) { // Determine the notes to be played based on the switch selected and the pitch (distance)
-      if (distance == 1) {
+    void NoteIndex(int note) { // Determine the notes to be played based on the switch selected and the pitch 
+      if (pitch == 1) {
         index = note;
       }
-      else if (distance == 2){
+      else if (pitch == 2){
         index = map(note, 0, 2, 3, 5); 
       }
-      else if (distance == 3){
+      else if (pitch == 3){
         index = map(note, 0, 2, 6, 8);
       }
-      else if (distance == 4){
+      else if (pitch == 4){
         index = map(note, 0, 2, 9, 11);
       }
       tone(TONER, melody[index], noteDuration); // Play note
@@ -106,4 +106,10 @@ I had to take off the pieces quite a few times to find a good layout for everyth
 ## Challenges
  - Connecting the Ultrasonic sensor properly: It took be quite a bit of time to figure out how to setup the sensor and correct my code to match it. Initally when
  I uploaded the code, no distance was being measured. 
-    - Solution: To figure out the problem, I looked in the Arduino examples for the Sensor example, and used that as a test for what I was doing wrong. It turns out that I had not put the echo pin in Input mode, and I had set the ping Pin as output in setup. So by following the Arduino example I was able to figure out that the echo Pin had to be in Input Mode, and include making the ping Pin as Output in the same function. 
+    - Solution: To figure out the problem, I looked in the Arduino examples for the Sensor example, and used that as a test for what I was doing wrong, as long with printting to the Serial Monitor. It turns out that I had not put the echo pin in Input mode, and I had set the ping Pin as output in setup. So by following the Arduino example I was able to figure out that the echo Pin had to be in Input Mode, and include making the ping Pin as Output in the same function. 
+ - Another challenge I had was getting the Blue LED to flash in the correct pattern. I did not want to use delay, but I also wanted the LEDs to flash a certain number of times and then pause.
+    - Solution: After sitting and thinking about it, I came up with the idea of using a counter. So I used two intervals, one for flasing the LED and another for the pause. If the counter was in the range of the number of flashes, I checked the flash interval, and if it was not, I checked the pause interval and then reset the counter.
+ - After fixing the Pitch flash, I noticed that it worked properly only when a switch was pressed. That was because I called the function to determine the pitch only when a switch was pressed. So if the user was trying to change the pitch before playing a note, they would not know what specific pitch it was. 
+   - Solution: Place the function to determine the  pitch outside of the if condition, so on each loop it is called. Then to play the note, place this inside the if contition that is triggered when a switch is pressed and it is the correct time to play a note.
+ - One final problem that I had was that when I settng up the circuit, I found the toner kept on making sounds even through no switch was being pressed.
+   - Solution: It turns out that I had put the voltage wire in the same row as the input wire to the Arduino. After removing it from that row, the toner stopped making the sounds. 
