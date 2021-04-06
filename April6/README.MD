@@ -31,7 +31,7 @@ will continue.
 ### Code
 The code was a bit of trial and error. I tried to be as object oriented as possible, so I utilized functions, as well as classes, and different Arduino tabs: One
 to store the musical notes and another for the classes.
-I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. 
+I used an array for the notes, similar to the Arduino example. Initially, because I was still struggling to understand the ultrasonic sensor I did not include it in the code, but after adding the other elements I decided to attempt the code for it. And to determine the distance, I converted the duration of the ultrasonic output to inches, and then I constrained the value within the range for the pitches. From there I mapped the note based on the switch selection to certain indexes of the array using this distance.
 
 
 ### Circuit
@@ -52,4 +52,4 @@ I had to take off the pieces quite a few times to find a good layout for everyth
 ## Challenges
  - Connecting the Ultrasonic sensor properly: It took be quite a bit of time to figure out how to setup the sensor and correct my code to match it. Initally when
  I uploaded the code, no distance was being measured. 
-    - Solution: To figure out the problem, I looked in the Arduino examples for the Sensor example, and used that as a test for what I was doing wrong. It turns out that I had not put in the echo pin in Input mode, and I had set the ping Pin as output in setup. So by following the Arduino example I was able to figure out the 
+    - Solution: To figure out the problem, I looked in the Arduino examples for the Sensor example, and used that as a test for what I was doing wrong. It turns out that I had not put the echo pin in Input mode, and I had set the ping Pin as output in setup. So by following the Arduino example I was able to figure out that the echo Pin had to be in Input Mode, and include making the ping Pin as Output in the same function. 
