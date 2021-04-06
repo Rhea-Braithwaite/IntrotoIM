@@ -64,6 +64,9 @@ The circuit was a bit more complicated this week, particularly because I was usi
    ![](images/switches.jpg)
    
 - Then I added the toner, the ultrasonic sensor, and the toggle switch.
+
+![](images/circuit1.jpg)
+
 - Then I added the red and blue LEDs
 - Next up were the resistors for all the switches and the LEDs
 - Then I added the 5 Volts and GND Wires
