@@ -7,6 +7,12 @@ If a bad dream is caught the score increases by 50 points, and if a good dream r
 
 ## Process
 ### Processing Code
+I started off by doing the processing code first. I wanted to achieve functionality using the Left and Right arrows before attempting to connect the game using the Arduino circuit and code. 
+ - To begin I added the background image
+ - Then I created and added the Dreamcatcher object and ensured that it could move from left to right using the arrow keys
+ - Next up was the objects for the dreams and ensuring that they could fall. I used an array of dreams and when the previous dream reached the middle of the the next one moved.
+ - Next up was ensuring that the Dreamcatcher could "catch" the dreams, by using the collision code and then reset the position of the dream
+ - Lastly I added the Game Over screen and had the game restart after 200 microseconds.
 
 
 ### Arduino Circuit
