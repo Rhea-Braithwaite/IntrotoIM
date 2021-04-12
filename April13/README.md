@@ -14,7 +14,7 @@ I started off by doing the processing code first. I wanted to achieve functional
  
  - Then I created and added the Dreamcatcher object and ensured that it could move from left to right using the arrow keys
 
- ![](media/images/dc.png)
+ ![](media/gifs/shift.gif)
  
  - Next up was the objects for the dreams and ensuring that they could fall. I used an array of dreams and when the previous dream reached the middle of the the next one moved.
  
