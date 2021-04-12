@@ -33,6 +33,35 @@ For the circuit I decided to keep things really simple and just try to see if I 
 
 ![](media/images/wires2.jpg)
 
+## Arduino Code
+Lastly, was my Arduino code. Given the simplicity of my circuit, the code was simple as well. I had two variables, leftSwitch and rightSwitch which read from the sensors and then printed them to processing.
+ ``
+ void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("0, 0");
+}
 
+void loop() {
+  // put your main code here, to run repeatedly:
+  while (Serial.available()) {
+    if (Serial.read() == '\n') {
+      int leftSwitch = digitalRead(A0);
+      delay(1);
+      int rightSwitch = digitalRead(A1);
+      delay(1);
+      Serial.print(leftSwitch);
+      Serial.print(',');
+      Serial.println(rightSwitch);
+    }
+  }
+}
+``
+
+## Challenges
+ - My first challenge was remembering how to reuse processing. I forgot how to do things such as creating classes and images.
+   - Solution: I consulted the reference page as well as my projects from the beginning of the semster. 
+ - Another problem I had, was that after I started running Arduino and Processing the DreamCatcher was not moving. 
+   - Solution: To figure out the problem I stopped Processing from running and then checked the Serial Monitor to see if the switch values were changing. Then given that the values were changing there, I tried printing them in Processing after the values were sent, to see if my code for accepting data was faulty. I realised then that what was being printed was only the fist 0, 0 values that were sent. Not being sure of what else to do I decided to remove a line of code from Arduino which was i = Serial.ParseInt(), and then the DreamCatcher started moving based onwhich switch was being presses. So I understood then that because Arduino was expecting a value, it was waiting for it before sending the switch values and that is why the code was not working. 
 
 
