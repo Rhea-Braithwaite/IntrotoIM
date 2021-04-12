@@ -11,5 +11,22 @@ If a bad dream is caught the score increases by 50 points, and if a good dream r
 
 ### Arduino Circuit
 For the circuit I decided to keep things really simple and just try to see if I could obtain game functionality using the two switches. 
+ - Firstly I started by adding the switches to the circuit
+
+![](media/images/switches.jpg)
+
+ - Then I added the resistors for the switches
+
+![](media/images/resistors.jpg)
+
+ - Then I connected the wires to the switches and to the corresponding Arduino pins
+
+![](media/images/wires1.jpg)
+
+ - And lastly I added the 5V and GND wires
+
+![](media/images/wires2.jpg)
+
+
 
 
