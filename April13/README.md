@@ -18,10 +18,11 @@ I started off by doing the processing code first. I wanted to achieve functional
  
  - Next up was the objects for the dreams and ensuring that they could fall. I used an array of dreams and when the previous dream reached the middle of the the next one moved.
  
- 
+  ![](media/gifs/fall.gif)
+  
  - Next up was ensuring that the Dreamcatcher could "catch" the dreams, by using the collision code and then reset the position of the dream
 
-
+ ![](media/gifs/catch.gif)
 
  - Lastly I added the Game Over screen and had the game restart after 10000 microseconds.
 
