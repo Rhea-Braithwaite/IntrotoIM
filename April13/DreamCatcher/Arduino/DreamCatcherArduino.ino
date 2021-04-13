@@ -12,15 +12,15 @@ void loop() {
   while (Serial.available()) {
     if (Serial.read() == '\n') {
       // Read the state of the switchs
-      int leftSwitch = digitalRead(SWITCH1);
+      int leftSwitchValue = digitalRead(SWITCH1);
       delay(1);
-      int rightSwitch = digitalRead(SWITCH2);
+      int rightSwitchValue = digitalRead(SWITCH2);
       delay(1);
       
       //Send the values to Processing
-      Serial.print(leftSwitch);
+      Serial.print(leftSwitchValue);
       Serial.print(',');
-      Serial.println(rightSwitch);
+      Serial.println(rightSwitchValue);
     }
   }
 }
