@@ -14,6 +14,7 @@ Processing would have display a screen of four lanes and at the bottom of the sc
 does not have a shadow then the switch only needs to be pressed and released. 
 
 ## Sketches
+![](media/images/sketch1.jpg)
 
 
 
