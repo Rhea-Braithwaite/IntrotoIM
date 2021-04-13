@@ -30,7 +30,7 @@ I started off by doing the processing code first. I wanted to achieve functional
 
 
 ### Arduino Circuit
-For the circuit I decided to keep things really simple and just try to see if I could obtain game functionality using the two switches. 
+For the circuit I decided to keep things really simple and just try to see if I could obtain game functionality using the two switches.
  - Firstly I started by adding the switches to the circuit
 
 ![](media/images/switches.jpg)
@@ -49,7 +49,7 @@ For the circuit I decided to keep things really simple and just try to see if I 
 
 ## Arduino Code
 Lastly, was my Arduino code. Given the simplicity of my circuit, the code was simple as well. I had two variables, leftSwitch and rightSwitch which read from the sensors and then printed them to processing.
- ``
+ ```
  void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -70,7 +70,7 @@ void loop() {
     }
   }
 }
-``
+```
 
 ## Challenges
  - My first challenge was remembering how to reuse processing. I forgot how to do things such as creating classes and images.
@@ -78,4 +78,7 @@ void loop() {
  - Another problem I had, was that after I started running Arduino and Processing the DreamCatcher was not moving. 
    - Solution: To figure out the problem I stopped Processing from running and then checked the Serial Monitor to see if the switch values were changing. Then given that the values were changing there, I tried printing them in Processing after the values were sent, to see if my code for accepting data was faulty. I realised then that what was being printed was only the fist 0, 0 values that were sent. Not being sure of what else to do I decided to remove a line of code from Arduino which was i = Serial.ParseInt(), and then the DreamCatcher started moving based onwhich switch was being presses. So I understood then that because Arduino was expecting a value, it was waiting for it before sending the switch values and that is why the code was not working. 
 
+## Final Results
+### Schematic
 
+![](media/images/schematic.jpg)
