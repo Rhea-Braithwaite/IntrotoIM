@@ -83,5 +83,8 @@ void loop() {
 
 ![](media/images/schematic.jpg)
 
+### Circuit
+![](media/images/circuit.jpg)
+
 ### Demo
 To see the demo [Click Here](https://youtu.be/-iS2Kv273LQ)
