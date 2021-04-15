@@ -8,12 +8,21 @@ I would like to have 2 to 3 songs that the are preloaded that the user can play,
 The circuit would utilize:
  - four switches which would act as notes to be pressed.
  - Additionally there would be the toner to play the music for the songs, as well as the notes for the different switches.
+ - I am debating whther or not to add LEDS to flash depending on the note being played.
+ - I am also debating adding a potentiometer so that the user can change the speed of the level to make things harder. 
+
+Arduiono would be sending to processing the values of the different switches. Annd depending on which switch was being pressed the toner would play the corresponding sound. 
+
 
 ### Processing: 
 Processing would display a screen of four lanes and at the bottom of the screen there would be four slots, each representing a switch and a note. When the note is in the slot that is when the switch must be pressed. If a note has a shadow then the switch has to be presed for the length of the shadow. If the note
 does not have a shadow then the switch only needs to be pressed and released.
 These four lanesand the notes would each have their own colours to act as an additional guide for the user.
 When a song is completed the user's score is displayed, as well as how many incorrect notes were pressed. Then they can either restart the song, or return to the main menu. 
+
+Processing would accept from Arduino the values of the different switches to determine which one is being pressed and if it matches the correct note on screen at the right time.
+
+If a potentiometer was added, Processing would accept the value and use it to change the interval by which the objects on the screen are moving. 
 
 ## Sketches
 ![](media/images/sketch1.jpg)
