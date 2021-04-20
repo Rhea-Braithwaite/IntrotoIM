@@ -59,7 +59,7 @@ Goals
 
 What I accomplished
 
-![](media/images/bg2.png)
+![](media/images/finalBG.png)
 
 ![](media/gifs/Fall1.gif)
 
