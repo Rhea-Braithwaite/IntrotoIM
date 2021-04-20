@@ -45,6 +45,9 @@ For now, I decided tonot add the background imagery, or the picture for the note
 
 Then I created a text file with the notes for Twinkle Twinkle Little Star, as that is what I am using as my song, and read from the file these notes and added them to each note object. In total Twinkle Twinkle Little Star has 42 stars and that's why so many of them are falling.
 
+
+[![Falling Notes Draft1](https://img.youtube.com/vi/VIDEO-ID/0.jpg)](https://youtu.be/zkO3Ew7QxL8)
+
 Takeaways
  - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
  - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
