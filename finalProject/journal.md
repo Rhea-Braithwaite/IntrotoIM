@@ -59,12 +59,14 @@ Goals
 
 What I accomplished
 
+Background
+I resized the background image and then added the image to the game. Then I redid the lane lines in purple with an increased stroke weight so that they are much clearer. I'm happy with how it turned out. 
+
 ![](media/images/finalBG.png)
 
-![](media/gifs/Fall1.gif)
+Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image varaible for each note. 
 
 Takeaways
- - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
- - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
+ - 
 
 
