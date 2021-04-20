@@ -53,6 +53,18 @@ Takeaways
  - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
  - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
 
+## April 20, 2020
+Goals
+ - Add Images for The Background and the Notes
 
+What I accomplished
+
+![](media/images/bg2.png)
+
+![](media/gifs/Fall1.gif)
+
+Takeaways
+ - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
+ - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
 
 
