@@ -46,6 +46,7 @@ For now, I decided tonot add the background imagery, or the picture for the note
 Then I created a text file with the notes for Twinkle Twinkle Little Star, as that is what I am using as my song, and read from the file these notes and added them to each note object. In total Twinkle Twinkle Little Star has 42 stars and that's why so many of them are falling.
 
 Click Image to See Demo
+
 [![Falling Notes Draft1](https://img.youtube.com/vi/zkO3Ew7QxL8/0.jpg)](https://youtu.be/zkO3Ew7QxL8)
 
 Takeaways
