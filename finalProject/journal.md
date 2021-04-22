@@ -119,13 +119,43 @@ Product
 
 ## April 21, 2020
 ### Goals
- - Add temporary check for "played" note
+ - Figure out a way to temporarily "play" a note. 
  - Add the score, and increment it depending on the location of the note in the drop zone when it was pressed
- - Figure out a way to "play" a note in processing, meaning a way for the user to know the note has been played
 
 #### What I accomplished
 
-Firstly I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
+Because I haven't added the Arduino yet, to "play" a note I decided to use keypressed, with these four keys being pressed, a, s, d, f, for the lanes 1, 2, 3, 4, respectively. I placed this in a function called check, and added the variable _playLane_ to keep track of the lane. If it is that Arduino will be constanly sending back values it makes sense that _playLane_ can either have values matching the lanes or not, so if a note is not being pressed, or a wrong key is pressed, the value of _playLane_ is 0.
+
+Code
+
+```
+void check(){
+  if (keyPressed){
+    if (key == 'a'){
+      playLane = 1;
+    }
+    else if (key == 's'){
+      playLane = 2;
+    }
+    else if (key == 'd'){
+      playLane= 3;
+    }
+    else if (key == 'f'){
+      playLane = 4;
+    }
+    else {
+      playLane = 0; 
+    }
+  }
+  else{ // This will not be necessary when Arduino is added, because only those four switches would be able to be pressed. 
+    playLane = 0;
+  }
+}
+```
+
+
+
+Then I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
 
 Here I also added the variable _colour_, so that when the note has been played a translucent ellipse comes over it, ie. this is from the variable _colour_ become true. 
 
@@ -158,6 +188,10 @@ void pressed(){
     }
   }
 ```
+
+Product
+
+
 
 
 ### Takeaways
