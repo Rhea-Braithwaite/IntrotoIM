@@ -64,9 +64,44 @@ I resized the background image and then added the image to the game. Then I redi
 
 ![](media/images/finalBG.png)
 
-Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. 
+Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. Notice that there is a trail and lag which I need to work on fixing.
 
 ![](media/gifs/FallingNotes.gif)
+
+Okay, so I realize now why the lag and trail were there. Firstly I had the circle still being drawn despite the fact that the image was there. Secondly I had my for loops within one another. I should have picked up on this when i tried to use i as the variable in the second for loop and I got an error, but that's why the lag was there. Now things are running smoothly.
+
+New Code for the for loops
+```
+void shift(){
+  if (frameCount >= start){ // Game Begins after 3 seconds
+  
+    if(noteIndex == 0 && notes[0].start == false){ // When the game begins have the first note begin moving
+        notes[0].start = true;
+        noteIndex ++;
+    }
+    
+    for (int i = 1; i < numNotes; i++){
+      if (i == noteIndex && notes[i].start == false){ // If The current note has not started moving then
+        if(notes[i-1].y >= checkPoint){ // Check if the previous note has reached checkpoint on the screen. If it has the next note starts moving
+          notes[i].start = true;
+          noteIndex ++;
+        }
+      }
+    }
+   
+    for(int i = 0; i< numNotes; i++){ // Update the location and display each note if it has alread started moving 
+      if (notes[i].start == true){
+        notes[i].update();
+        notes[i].display();
+
+      }
+    }
+  }
+}
+```
+
+Product
+
 
 Takeaways
  - 
