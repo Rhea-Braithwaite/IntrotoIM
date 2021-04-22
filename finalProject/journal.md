@@ -190,11 +190,27 @@ void pressed(){
 ```
 
 Product
-
-
-
+![](media/gifs/notePress.gif)
 
 ### Takeaways
+ - Given that I have basic code functionality, now would be a good time to start working on the Arduino compenent. If thta works fine that I can return and add the other elements that I want
+ - Note to self: For the shadow element, a bar can be used to track how long a note has been pressed. If the state of the switch fro that lane changes before the bar fills, then stop playing the sound, and give only a portion of the score.
+
+ahhhh
+
+## April 22, 2020
+### Goals
+ - Draw preliminary shcematic for Arduino
+ - Create circuit and have it play the sounds of the the different notes. 
+
+#### What I accomplished
+
+Loading... 
+
+### Takeaways
+ - 
+
+
 
 
 
