@@ -111,7 +111,59 @@ Product
 
 ![](media/gifs/SmoothFall.gif)
 
-Takeaways
- - 
+### Takeaways
+ - If I add code ansure to review it so that evrything is the way that I want it
+ - Add comments as I go along
+ - If it is that I am going to include the note with the shadow for long notes then I need to have the following note be in a different lane, so that the sound won't overlap for the two. 
+ - And I need to add some temporary check that will allow me to know for now if a note has been "played"
+
+## April 21, 2020
+### Goals
+ - Add temporary check for "played" note
+ - Add the score, and increment it depending on the location of the note in the drop zone when it was pressed
+ - Figure out a way to "play" a note in processing, meaning a way for the user to know the note has been played
+
+#### What I accomplished
+
+Firstly I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
+
+Here I also added the variable _colour_, so that when the note has been played a translucent ellipse comes over it, ie. this is from the variable _colour_ become true. 
+
+Code
+
+```
+void pressed(){
+    int laneSwitch = playLane;
+    if (laneSwitch == lane && play == false){
+      if(y-(nHeight/2)>= barHeight && y+(nHeight/2)< height){ // note perfectly in play zone
+        play =  true;
+        score += 100; // score increase
+        colour = true;
+        // send note to Arduino
+        
+      }
+      else if (y-(nHeight/2)< barHeight && y+(nHeight/2)>= barHeight){ // note only marginally in play zone (bottom half inside)
+        play = true;
+        score += 50; // score increases at lesser amount
+        colour = true;
+        // send note to Arduino
+      }
+      else if (y-(nHeight/2)> barHeight && y+(nHeight/2)> height){// note only marginally in play zone (top half inside)
+        play = true;
+        score += 50; // score increases at lesser amount
+        colour = true;
+        // send note to Arduino
+      }
+   
+    }
+  }
+```
+
+
+### Takeaways
+
+
+
+
 
 
