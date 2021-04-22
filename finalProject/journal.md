@@ -64,7 +64,7 @@ I resized the background image and then added the image to the game. Then I redi
 
 ![](media/images/finalBG.png)
 
-Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image varaible for each note. 
+Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. 
 
 ![](media/gifs/FallingNotes.gif)
 
