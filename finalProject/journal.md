@@ -24,16 +24,16 @@ Processing would accept from Arduino the values of the different switches to det
 
 If a potentiometer was added, Processing would accept the value and use it to change the interval by which the objects on the screen are moving. 
 
-### Sketches
+#### Sketches
 ![](media/images/sketch1.jpg)
 
 ## April 19, 2020
-Goals
+### Goals
  - Create Text File of Notes
  - Complete initial layout
  - Figure out how to get notes to fall
 
-What I accomplished
+#### What I accomplished
 
 For the initial layout, as shown in my sketch, I came up with four lanes and the drop zone at the bottom where the switch is to be pressed to play the note
 
@@ -49,22 +49,27 @@ Click Image to See Demo
 
 [![Falling Notes Draft1](https://img.youtube.com/vi/zkO3Ew7QxL8/0.jpg)](https://youtu.be/zkO3Ew7QxL8)
 
-Takeaways
+#### Takeaways
  - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
  - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
 
 ## April 20, 2020
-Goals
+### Goals
  - Add Images for The Background and the Notes
 
-What I accomplished
+#### What I accomplished
 
 Background
+
 I resized the background image and then added the image to the game. Then I redid the lane lines in purple with an increased stroke weight so that they are much clearer. I'm happy with how it turned out. 
 
 ![](media/images/finalBG.png)
 
 Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. Notice that there is a trail and lag which I need to work on fixing.
+
+Here is the note for the image
+
+And this is how it looks in the game
 
 ![](media/gifs/FallingNotes.gif)
 
@@ -102,6 +107,7 @@ void shift(){
 
 Product
 
+![](media/gifs/SmoothFall.gif)
 
 Takeaways
  - 
