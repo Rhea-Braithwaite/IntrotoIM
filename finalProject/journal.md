@@ -69,6 +69,8 @@ Next up was the imagery for the notes. I resized the picture to the size in the 
 
 Here is the note for the image
 
+![](media/images/note.png)
+
 And this is how it looks in the game
 
 ![](media/gifs/FallingNotes.gif)
