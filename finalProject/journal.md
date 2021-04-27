@@ -200,7 +200,7 @@ Product
 
 ahhhh
 
-## April 22, 2020
+## April 22, 2021
 ### Goals
  - Draw preliminary shcematic for Arduino
  - Create circuit and have it play the sounds of the the different notes.
@@ -208,7 +208,7 @@ ahhhh
 
 #### What I accomplished
 
-Today, I started working on my circuit. 
+**Today, I started working on my circuit. **
 
 First things first, I drew a preliminary sketch
 
@@ -217,8 +217,7 @@ First things first, I drew a preliminary sketch
  - Next up was connecting the components to their corresponding Arduino pins
  - Then I added the voltage wires and the ground wires
 
-After this I wrote the Arduino code, and editted my Processing code to support communication between the two. 
-
+**After this I wrote the Arduino code, and edited my Processing code to support communication between the two. **
 
 Processing: I had to do a bit of printing at different points to ensure that accurate values were being passed back and forth. 
 So, Processing accepts the values of the different switches to check from which lane the note should be played and passes the note to be passed based on the one that is in the play zone when the switch is pressed.
@@ -318,18 +317,27 @@ ahhhh
  - Work on the start screen and end of level screen
 
 #### What I accomplished
- - Created a Song Class
+ - **Created a Song Class**
 As I knew I wnated to add another song, I thought it would make sense to add a song class. This would include the array of notes, as well as variables for the noteIndex, the number of notes, the score and the bonus. 
 
- - Added a start screen
+ - **Added a start screen**
 
 To do the start screen I found a nice background picture online that I reconfgured to fit the dimensions of the game Screen. I was not sure of a title yet, so I just wrote something to fill the space, as well as a prompt to have the game start. I knew I wanted to have two songs, so I had two note images on screen to represent each one.
 
+![](media/images/StartScreen1.png)
+
 At this point I found the lettering a bit bland so I added a different font
+
+![](media/images/StartScreen2.png)
 
  - Help Screen
 
 For the help screen, I wanted so that the user could simply move the mouse over a question mark and have it come up. To do this, I firstly added a circle in the top right corner of the screen with a question mark inside. Then, in Word and using a text box created an image for the game instructions. Then I simply wrote a bit of code to display the image, and the how to play screen was complete. 
+
+![](media/images/StartScreen3.png)
+
+
+![](media/images/HelpScreen.png)
 
  - Added an end-of-level Screen
 
@@ -341,7 +349,10 @@ Empty Star
 
 I also showed on screen the score, as well as a bonus which would depend on the potentiometer that I would eventually add. 
 
+![](media/images/EOLScreen1.png)
+
 And finally I added two buttons that the user could press to restart the game or return to the menu.
+![](media/images/EOLScreen2.png)
 
  - Figured out how to reset the song
 
