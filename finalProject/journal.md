@@ -205,8 +205,6 @@ Product
  - Given that I have basic code functionality, now would be a good time to start working on the Arduino compenent. If thta works fine that I can return and add the other elements that I want
  - Note to self: For the shadow element, a bar can be used to track how long a note has been pressed. If the state of the switch fro that lane changes before the bar fills, then stop playing the sound, and give only a portion of the score.
 
-
-
 ## April 22, 2021
 ### Goals
  - Draw preliminary shcematic for Arduino
@@ -316,7 +314,6 @@ void playNote(int note){
 ### Takeaways
  - 
 
-ahhhh
 
 ## April 25, 2021
 ### Goals
@@ -352,7 +349,11 @@ For the end of level screen, I did not want to just show the overall score. So, 
 
 Filled Star
 
+![](media/images/empty.png)
+
 Empty Star
+
+![](media/images/star.png)
 
 I also showed on screen the score, as well as a bonus which would depend on the potentiometer that I would eventually add. 
 
