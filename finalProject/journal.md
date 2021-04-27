@@ -419,12 +419,13 @@ At this point, I tried to find a different song to use. I settled on Our Soong b
 
  - **Shadow** 
 Then I tried to work on the Shadow. I took a few hours to try and find different ways to come up with an answer, but unfortunately I couldn't. So I've decided to remove it from the code. It's an issue that I want to look in further outside of this project. 
+
 #### Problems
- - 
+ - Most definitely with the shadow. I just couldn't figure out how to do it. 
 
 ### Takeaways
  - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
- - To play different song lengths, I'll need different distances between the notes, ie. different checkpoints
+ - To play different song lengths, I'll need different distances between the notes, ie. different checkpoints.
 
 
 
@@ -432,17 +433,108 @@ Then I tried to work on the Shadow. I took a few hours to try and find different
 ### Goals
  - Getting the notes to play based on the note length
  - Add the second song
+ - Adding the potentiometer
+
+
 #### What I accomplished
 
 **Notes played according to their length**
 
+To get the notes playing according to their lengths, I added their beats to the text file that had the notes within them. Working from this I had each note then have a corresponding checkpoint at which the next note could then start falling. I had to play around with these a bit, to find the right ones
 
+```
+Note (int LANE, int NOTE, int LENGTH){
+    colour = false;
+    played = false;
+    start = false;
+    lane = LANE;
+    x = (LANE*laneWidth)-(laneWidth/2);
+    y = NOTEY;
+    nWidth = NOTEWIDTH;
+    nHeight = NOTEHEIGHT;
+    interval = NOTEINTERVAL;
+    note = NOTE;
+    len = LENGTH;
+    img = noteImg;
+    
+    if (len == 1){
+      checkPoint = 300;
+    }
+    else if (len == 2){
+      checkPoint = 500;
+    }
+    else if (len == 4){
+      checkPoint = 750; 
+    }
+    else if (len == 5){
+      checkPoint = 260;
+    }
+```
+
+It's not absolutely perfect, but I did my best.
+
+This corresponding length was then passed to Arduino, which used this to play the note.
+
+```
+void playNote(){
+  if (note != 0){
+    int index = note - 1;
+  
+    if (len == 1){
+      int noteDuration = 500;
+      tone(TONER, melody[index], noteDuration); // Play note
+    }
+    else if (len == 2){
+      int noteDuration = 1000;
+      tone(TONER, melody[index], noteDuration);
+    }
+    else if (len == 4){
+      int noteDuration = 2000;
+      tone(TONER, melody[index], noteDuration);  
+    }
+    else if (len == 5){
+      int noteDuration = 250;
+      tone(TONER, melody[index], noteDuration);  
+    }
+  }
+}
+```
+
+**Adding the Second Song**
+Adding the second song took a bit of work, what I had initially used for the notes for Our Song by Taylor Swift was wrong, so I had to find another song. I settled on Jingle Bells, and then organized the notes and note lengths in a spearate text file.
+
+I had made a Songs array, so simply initialized this other song, with the matching number of notes, after the data had been read from file.
+
+**Adding the Potentiometer**
+
+I began by adding the potentiometer to the circuit board.
+
+![](media/images/circuit5.jpg)
+
+Then I edited my Arduino to read this value, map it from 1 to 3 and write to processing. On the Processing side, this value is accepted and then used to determine the interval by which the notes will move as they fall. Depending on the speed there will be a bonus
+
+```
+if(startGame == false){
+    if (speed == 1){
+      noteInterval = 4;
+      difficultyBonus = 0;
+    }
+    else if(speed == 2){
+      noteInterval = 6;
+      difficultyBonus = 300;
+    }
+    else if (speed == 3){
+      noteInterval = 8;
+      difficultyBonus = 600;
+    }
+  }
+```
 
 #### Problems
- - 
+ - Reading from file and splitting gave me a bit of trouble because of mismatching data types. But I eventually realized that sicne my data is made up of integers, int[] var = int(split(s, ',')), works. I had to print several times and consult the lecture notes in order to figure this out.
 
 ### Takeaways
- - 
+ - That's the last of the code functionality, now I need to comment my code.
 
 
 
