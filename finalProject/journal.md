@@ -319,8 +319,33 @@ ahhhh
 
 #### What I accomplished
  - Added a start screen
+
+To do the start screen I found a nice background picture online that I reconfgured to fit the dimensions of the game Screen. I was not sure of a title yet, so I just wrote something to fill the space, as well as a prompt to have the game start. I knew I wanted to have two songs, so I had two note images on screen to represent each one.
+
+At this point I found the lettering a bit bland so I added a different font
+
+ - Help Screen
+
+For the help screen, I wanted so that the user could simply move the mouse over a question mark and have it come up. To do this, I firstly added a circle in the top right corner of the screen with a question mark inside. Then, in Word and using a text box created an image for the game instructions. Then I simply wrote a bit of code to display the image, and the how to play screen was complete. 
+
+
+
  - Added an end-of-level Screen
+
+For the end of level screen, I did not want to just show the overall score. So, like in other games I added some stars to show how well the user did. There are three stars, and depending on how well the user did, they vary between filled or empty. 
+
+Filled Star
+
+Empty Star
+
+I also showed on screen the score, as well as a bonus which would depend on the potentiometer that I would eventually add. 
+
+And finally I added two buttons that the user could press to restart the game or return to the menu.
+
  - Created a Song Class
+
+
+
  - Figured out how to reset the song
  - Attempted Song 2
 
