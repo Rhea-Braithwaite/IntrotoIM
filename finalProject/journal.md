@@ -36,14 +36,17 @@ If a potentiometer was added, Processing would accept the value and use it to ch
  - Figure out how to get notes to fall
 
 #### What I accomplished
+**Initial Layout** 
 
 For the initial layout, as shown in my sketch, I came up with four lanes and the drop zone at the bottom where the switch is to be pressed to play the note
 
 ![](media/images/bg2.png)
 
-For now, I decided tonot add the background imagery, or the picture for the notes, just to see if I could get functionality first. I decided to use my code from the previous week's assignment, DreamCatcher and modified it to represent a note. At the moment, the moving circle's are the notes. Initially I used an array of seven notes, and a new one started moving each time the previous one had been on screen for 120 frames or 2 seconds. 
+For now, I decided to not add the background imagery, or the picture for the notes, just to see if I could get functionality first. I decided to use my code from the previous week's assignment, DreamCatcher and modified it to represent a note. At the moment, the moving circle's are the notes. Initially I used an array of seven notes, and a new one started moving each time the previous one had been on screen for 120 frames or 2 seconds. 
 
 ![](media/gifs/Fall1.gif)
+
+**Create Text Files**
 
 Then I created a text file with the notes for Twinkle Twinkle Little Star, as that is what I am using as my song, and read from the file these notes and added them to each note object. In total Twinkle Twinkle Little Star has 42 stars and that's why so many of them are falling.
 
@@ -68,6 +71,7 @@ I resized the background image and then added the image to the game. Then I redi
 ![](media/images/finalBG.png)
 
 **Game Images**
+
 Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. Notice that there is a trail and lag which I need to work on fixing.
 
 Here is the note for the image
