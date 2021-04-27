@@ -125,6 +125,8 @@ void shift(){
  - If it is that I am going to include the note with the shadow for long notes then I need to have the following note be in a different lane, so that the sound won't overlap for the two. 
  - And I need to add some temporary check that will allow me to know for now if a note has been "played"
 
+
+
 ## April 21, 2020
 ### Goals
  - Figure out a way to temporarily "play" a note. 
@@ -204,6 +206,7 @@ Product
 ### Takeaways
  - Given that I have basic code functionality, now would be a good time to start working on the Arduino compenent. If thta works fine that I can return and add the other elements that I want
  - Note to self: For the shadow element, a bar can be used to track how long a note has been pressed. If the state of the switch fro that lane changes before the bar fills, then stop playing the sound, and give only a portion of the score.
+
 
 ## April 22, 2021
 ### Goals
@@ -305,14 +308,11 @@ void playNote(int note){
   }
 }
 ```
-
-
-
 #### Problems
  - I encountered a problem here regarding the switches. At first, no sound was being played, and when I started printing in Processing the lane values were 0. So I decided to try and use Arduino separately to see what the problem was, using the Serial Monitor. Here I noticed that at Random points the switch values would change, and after closer analysis it turns out that I had not had ground connected to the circuit. I then had to mess around with the noteDuration a bit to figure out the right length for the note to play.
 
 ### Takeaways
- - 
+ - I could add a length for the different types of notes that are to beplayed rather than have the same exact length each time, to make the songs more accurate.
 
 
 ## April 25, 2021
@@ -338,8 +338,11 @@ At this point I found the lettering a bit bland so I added a different font
 
 For the help screen, I wanted so that the user could simply move the mouse over a question mark and have it come up. To do this, I firstly added a circle in the top right corner of the screen with a question mark inside. Then, in Word and using a text box created an image for the game instructions. Then I simply wrote a bit of code to display the image, and the how to play screen was complete. 
 
+Start Screen with Help Circle 
+
 ![](media/images/StartScreen3.png)
 
+How to Play Screen
 
 ![](media/images/HelpScreen.png)
 
@@ -407,6 +410,7 @@ Then I tried to work on the Shadow. I took a few hours to try and find different
 
 ### Takeaways
  - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
+ - To play different song lengths, I'll need different distances between the notes, ie. different checkpoints
 
 
 
