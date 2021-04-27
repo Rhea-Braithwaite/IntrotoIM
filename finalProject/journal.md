@@ -116,6 +116,7 @@ void shift(){
 
 **Product**
 
+
 ![](media/gifs/SmoothFall.gif)
 
 ### Takeaways
@@ -130,7 +131,8 @@ void shift(){
  - Add the score, and increment it depending on the location of the note in the drop zone when it was pressed
 
 #### What I accomplished
- - **Temporarily "play" note ** 
+ - **Temporarily "play" note**
+  
 Because I haven't added the Arduino yet, to "play" a note I decided to use keypressed, with these four keys being pressed, a, s, d, f, for the lanes 1, 2, 3, 4, respectively. I placed this in a function called check, and added the variable _playLane_ to keep track of the lane. If it is that Arduino will be constanly sending back values it makes sense that _playLane_ can either have values matching the lanes or not, so if a note is not being pressed, or a wrong key is pressed, the value of _playLane_ is 0.
 
 Code
@@ -161,6 +163,7 @@ void check(){
 ```
 
  - **Increment score**
+ 
 Then I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
 
 Here I also added the variable _colour_, so that when the note has been played a translucent ellipse comes over it, ie. this is from the variable _colour_ become true. 
@@ -202,7 +205,7 @@ Product
  - Given that I have basic code functionality, now would be a good time to start working on the Arduino compenent. If thta works fine that I can return and add the other elements that I want
  - Note to self: For the shadow element, a bar can be used to track how long a note has been pressed. If the state of the switch fro that lane changes before the bar fills, then stop playing the sound, and give only a portion of the score.
 
-ahhhh
+
 
 ## April 22, 2021
 ### Goals
@@ -211,7 +214,7 @@ ahhhh
 
 #### What I accomplished
 
-**Today, I started working on my circuit. **
+**Started working on my circuit**
 
 First things first, I drew a preliminary sketch
 
@@ -220,7 +223,7 @@ First things first, I drew a preliminary sketch
  - Next up was connecting the components to their corresponding Arduino pins
  - Then I added the voltage wires and the ground wires
 
-**After this I wrote the Arduino code, and edited my Processing code to support communication between the two. **
+**After this I wrote the Arduino code, and edited my Processing code to support communication between the two.**
 
 Processing: I had to do a bit of printing at different points to ensure that accurate values were being passed back and forth. 
 So, Processing accepts the values of the different switches to check from which lane the note should be played and passes the note to be passed based on the one that is in the play zone when the switch is pressed.
