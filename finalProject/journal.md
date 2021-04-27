@@ -431,6 +431,9 @@ Then I tried to work on the Shadow. I took a few hours to try and find different
  - Add the second song
 #### What I accomplished
 
+**Notes played according to their length**
+
+
 
 #### Problems
  - 
