@@ -61,12 +61,13 @@ Click Image to See Demo
 
 #### What I accomplished
 
-Background
+**Background**
 
 I resized the background image and then added the image to the game. Then I redid the lane lines in purple with an increased stroke weight so that they are much clearer. I'm happy with how it turned out. 
 
 ![](media/images/finalBG.png)
 
+**Game Images**
 Next up was the imagery for the notes. I resized the picture to the size in the game and then loaded it in setup and added it to the image variable for each note. Notice that there is a trail and lag which I need to work on fixing.
 
 Here is the note for the image
@@ -109,7 +110,7 @@ void shift(){
 }
 ```
 
-Product
+**Product**
 
 ![](media/gifs/SmoothFall.gif)
 
@@ -125,7 +126,7 @@ Product
  - Add the score, and increment it depending on the location of the note in the drop zone when it was pressed
 
 #### What I accomplished
-
+ - **Temporarily "play" note ** 
 Because I haven't added the Arduino yet, to "play" a note I decided to use keypressed, with these four keys being pressed, a, s, d, f, for the lanes 1, 2, 3, 4, respectively. I placed this in a function called check, and added the variable _playLane_ to keep track of the lane. If it is that Arduino will be constanly sending back values it makes sense that _playLane_ can either have values matching the lanes or not, so if a note is not being pressed, or a wrong key is pressed, the value of _playLane_ is 0.
 
 Code
@@ -155,8 +156,7 @@ void check(){
 }
 ```
 
-
-
+ - **Increment score**
 Then I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
 
 Here I also added the variable _colour_, so that when the note has been played a translucent ellipse comes over it, ie. this is from the variable _colour_ become true. 
@@ -204,7 +204,6 @@ ahhhh
 ### Goals
  - Draw preliminary shcematic for Arduino
  - Create circuit and have it play the sounds of the the different notes.
- - Try doing the shadow 
 
 #### What I accomplished
 
@@ -302,19 +301,20 @@ void playNote(int note){
 }
 ```
 
-Then I tried to work on the Shadow. I took a few hours to try and find different ways to come up with an answer, but unfortunately I couldn't. So I've decided to remove it from the code. It's an issue that I want to look in further outside of this project. 
+
 
 #### Problems
  - I encountered a problem here regarding the switches. At first, no sound was being played, and when I started printing in Processing the lane values were 0. So I decided to try and use Arduino separately to see what the problem was, using the Serial Monitor. Here I noticed that at Random points the switch values would change, and after closer analysis it turns out that I had not had ground connected to the circuit. I then had to mess around with the noteDuration a bit to figure out the right length for the note to play.
 
 ### Takeaways
- - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
+ - 
 
 ahhhh
 
 ## April 25, 2021
 ### Goals
  - Work on the start screen and end of level screen
+ - Try doing the shadow 
 
 #### What I accomplished
  - **Created a Song Class**
@@ -330,7 +330,7 @@ At this point I found the lettering a bit bland so I added a different font
 
 ![](media/images/StartScreen2.png)
 
- - Help Screen
+ - **Help Screen**
 
 For the help screen, I wanted so that the user could simply move the mouse over a question mark and have it come up. To do this, I firstly added a circle in the top right corner of the screen with a question mark inside. Then, in Word and using a text box created an image for the game instructions. Then I simply wrote a bit of code to display the image, and the how to play screen was complete. 
 
@@ -339,7 +339,7 @@ For the help screen, I wanted so that the user could simply move the mouse over 
 
 ![](media/images/HelpScreen.png)
 
- - Added an end-of-level Screen
+ - **Added an end-of-level Screen**
 
 For the end of level screen, I did not want to just show the overall score. So, like in other games I added some stars to show how well the user did. There are three stars, and depending on how well the user did, they vary between filled or empty. 
 
@@ -354,7 +354,7 @@ I also showed on screen the score, as well as a bonus which would depend on the 
 And finally I added two buttons that the user could press to restart the game or return to the menu.
 ![](media/images/EOLScreen2.png)
 
- - Figured out how to reset the song
+ - **Figured out how to reset the song**
 
 Given that I added a reset button on the end of level screen, it was time to figure out how to do this. 
 For the song to restart, I had each note reset to a random lane, as well as reinitalize each of the song variables
@@ -388,17 +388,19 @@ void reset(){
   }
 ```
 
- - Attempted Song 2
+ - **Attempted Song 2**
 
 At this point, I tried to find a different song to use. I settled on Our Soong by Talor Swift, and then I created another text file to include the notes. Ahead of what I would work on next, which would include the length of the note, I added the note length to each note and did the same thing for Twinkle Twinkle Little Star
 
-
-
+ - **Shadow** 
+Then I tried to work on the Shadow. I took a few hours to try and find different ways to come up with an answer, but unfortunately I couldn't. So I've decided to remove it from the code. It's an issue that I want to look in further outside of this project. 
 #### Problems
  - 
 
 ### Takeaways
- - 
+ - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
+
+
 
 ## April 26, 2021
 ### Goals
