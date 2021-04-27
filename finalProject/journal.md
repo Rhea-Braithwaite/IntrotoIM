@@ -29,7 +29,9 @@ If a potentiometer was added, Processing would accept the value and use it to ch
 
 ## April 19, 2020
 ### Goals
- - Create Text File of Notes
+ - Create 
+ 
+ File of Notes
  - Complete initial layout
  - Figure out how to get notes to fall
 
@@ -201,14 +203,137 @@ ahhhh
 ## April 22, 2020
 ### Goals
  - Draw preliminary shcematic for Arduino
- - Create circuit and have it play the sounds of the the different notes. 
+ - Create circuit and have it play the sounds of the the different notes.
+ - Try doing the shadow 
 
 #### What I accomplished
 
-Loading... 
+Today, I started working on my circuit. 
+
+First things first, I drew a preliminary sketch
+
+ - I began by adding the switches and the toner
+ - Then I added the resistors for the switches
+ - Next up was connecting the components to their corresponding Arduino pins
+ - Then I added the voltage wires and the ground wires
+
+After this I wrote the Arduino code, and editted my Processing code to support communication between the two. 
+
+
+Processing: I had to do a bit of printing at different points to ensure that accurate values were being passed back and forth. 
+So, Processing accepts the values of the different switches to check from which lane the note should be played and passes the note to be passed based on the one that is in the play zone when the switch is pressed.
+```
+void serialEvent(Serial myPort){ // Accept the values of the switches from Arduino
+  String s = myPort.readStringUntil('\n');
+  
+  s = trim(s);
+  if (s!= null){
+    int laneValues[] = int(split(s,','));
+    if(laneValues.length == 4){
+      int lane1 = laneValues[0];
+      int lane2 = laneValues[1];
+      int lane3 = laneValues[2];
+      int lane4 = laneValues[3];
+      
+      check(lane1, lane2, lane3, lane4);
+    }
+  }
+  myPort.write(int(noteToPass)+"\n");
+  noteToPass=0;
+}
+```
+
+Arduino - I included a notes.h file which contains the sound files as well as used an array for the notes so that they were easily acessible
+
+Arduino accepts the note that is to be played, uses this to determine the index and then plays the note for 1500 milliseconds.
+
+```
+#include "notes.h"
+const int SWITCH1 = A0;
+const int SWITCH2 = A1;
+const int SWITCH3 = A2;
+const int SWITCH4 = A3;
+const int TONER = 8; 
+int note=0;
+const int noteDuration = 1500;
+
+int melody[] = {NOTE_A3, NOTE_B3, NOTE_C3, NOTE_D3, NOTE_E3, NOTE_F3, NOTE_G3};
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("0, 0, 0, 0");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  while(Serial.available()){
+    note = Serial.parseInt();
+    
+    if (Serial.read() == '\n'){
+      playNote(note);
+      // Read the state of the switches
+      //Serial.print('a');
+      int lane1 = digitalRead(SWITCH1);
+      delay(1);
+      int lane2 = digitalRead(SWITCH2);
+      delay(1);
+      int lane3 = digitalRead(SWITCH3);
+      delay(1);
+      int lane4 = digitalRead(SWITCH4);
+      delay(1);
+
+      //Send the values to Processing
+      Serial.print(lane1);
+      Serial.print(',');
+      Serial.print(lane2);
+      Serial.print(',');
+      Serial.print(lane3);
+      Serial.print(',');
+      Serial.println(lane4);
+    }
+  }
+}
+
+void playNote(int note){
+  if (note != 0){
+    int index = note - 1;
+    tone(TONER, melody[index], noteDuration); // Play note
+  }
+}
+```
+
+Then I tried to work on the Shadow. I took a few hours to try and find different ways to come up with an answer, but unfortunately I couldn't. So I've decided to remove it from the code. It's an issue that I want to look in further outside of this project. 
+
+#### Problems
+ - I encountered a problem here regarding the switches. At first, no sound was being played, and when I started printing in Processing the lane values were 0. So I decided to try and use Arduino separately to see what the problem was, using the Serial Monitor. Here I noticed that at Random points the switch values would change, and after closer analysis it turns out that I had not had ground connected to the circuit. I then had to mess around with the noteDuration a bit to figure out the right length for the note to play.
+
+### Takeaways
+ - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
+
+ahhhh
+
+## April 25, 2021
+### Goals
+ - Work on the start screen and end of level screen
+
+#### What I accomplished
+ - Added a start screen
+ - Added an end-of-level Screen
+ - Created a Song Class
+ - Figured out how to reset the song
+ - Attempted Song 2
+
+
+
+
+#### Problems
+ - 
 
 ### Takeaways
  - 
+
+
 
 
 
