@@ -360,6 +360,10 @@ How to Play Screen
 
 ![](media/images/HelpScreen.png)
 
+Demo of Start Screen and Help Screen 
+
+![](media/gifs/intro.gif)
+
  - **Added an end-of-level Screen**
 
 For the end of level screen, I did not want to just show the overall score. So, like in other games I added some stars to show how well the user did. There are three stars, and depending on how well the user did, they vary between filled or empty. 
@@ -377,6 +381,7 @@ I also showed on screen the score, as well as a bonus which would depend on the 
 ![](media/images/EOLScreen1.png)
 
 And finally I added two buttons that the user could press to restart the game or return to the menu.
+
 ![](media/images/EOLScreen2.png)
 
  - **Figured out how to reset the song**
@@ -412,6 +417,14 @@ void reset(){
     }
   }
 ```
+
+Demo of Song Restarting 
+
+![](media/gifs/restart.gif)
+
+Demo of Returning to Start Screen after Song is Completed 
+
+![](media/gifs/menu.gif)
 
  - **Attempted Song 2**
 
@@ -529,6 +542,10 @@ if(startGame == false){
     }
   }
 ```
+
+Demo of Song with Increased Speed
+
+![](media/gifs/speed.gif)
 
 #### Problems
  - Reading from file and splitting gave me a bit of trouble because of mismatching data types. But I eventually realized that sicne my data is made up of integers, int[] var = int(split(s, ',')), works. I had to print several times and consult the lecture notes in order to figure this out.
