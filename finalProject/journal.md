@@ -318,6 +318,9 @@ ahhhh
  - Work on the start screen and end of level screen
 
 #### What I accomplished
+ - Created a Song Class
+As I knew I wnated to add another song, I thought it would make sense to add a song class. This would include the array of notes, as well as variables for the noteIndex, the number of notes, the score and the bonus. 
+
  - Added a start screen
 
 To do the start screen I found a nice background picture online that I reconfgured to fit the dimensions of the game Screen. I was not sure of a title yet, so I just wrote something to fill the space, as well as a prompt to have the game start. I knew I wanted to have two songs, so I had two note images on screen to represent each one.
@@ -327,8 +330,6 @@ At this point I found the lettering a bit bland so I added a different font
  - Help Screen
 
 For the help screen, I wanted so that the user could simply move the mouse over a question mark and have it come up. To do this, I firstly added a circle in the top right corner of the screen with a question mark inside. Then, in Word and using a text box created an image for the game instructions. Then I simply wrote a bit of code to display the image, and the how to play screen was complete. 
-
-
 
  - Added an end-of-level Screen
 
@@ -342,13 +343,43 @@ I also showed on screen the score, as well as a bonus which would depend on the 
 
 And finally I added two buttons that the user could press to restart the game or return to the menu.
 
- - Created a Song Class
-
-
-
  - Figured out how to reset the song
+
+Given that I added a reset button on the end of level screen, it was time to figure out how to do this. 
+For the song to restart, I had each note reset to a random lane, as well as reinitalize each of the song variables
+
+```
+void reset(){
+    noteIndex = 0;
+    songEnd = false;
+    pause = false;
+    score = 0;
+    bonus = 0;
+    
+    for(int i = 0; i < numNotes; i++){
+      if (i+1 % 7 == 0){ // For notes with a longer sound
+        int lane = int(random(1, 4));
+        notes[i].reset(lane);
+        prevL = lane;
+      }
+      else if ( i+1 % 8 == 0 ){ // Note immediately after note with a longer sound
+        int lane = int(random(1, 4));
+        while (lane == prevL){
+          lane = int(random(1, 4));
+        }
+        notes[i].reset(lane);
+      }
+      else {
+        int lane = int(random(1, 4));
+        notes[i].reset(lane);
+      }
+    }
+  }
+```
+
  - Attempted Song 2
 
+At this point, I tried to find a different song to use. I settled on Our Soong by Talor Swift, and then I created another text file to include the notes. Ahead of what I would work on next, which would include the length of the note, I added the note length to each note and did the same thing for Twinkle Twinkle Little Star
 
 
 
@@ -357,6 +388,21 @@ And finally I added two buttons that the user could press to restart the game or
 
 ### Takeaways
  - 
+
+## April 26, 2021
+### Goals
+ - Getting the notes to play based on the note length
+ - Add the second song
+#### What I accomplished
+
+
+#### Problems
+ - 
+
+### Takeaways
+ - 
+
+
 
 
 
