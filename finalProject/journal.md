@@ -220,9 +220,20 @@ Product
 First things first, I drew a preliminary sketch
 
  - I began by adding the switches and the toner
+
+![](media/images/circuit1.png)
+
  - Then I added the resistors for the switches
+
+ ![](media/images/circuit2.png)
+ 
  - Next up was connecting the components to their corresponding Arduino pins
+
+![](media/images/circuit3.png)
+
  - Then I added the voltage wires and the ground wires
+
+![](media/images/circuit4.png)
 
 **After this I wrote the Arduino code, and edited my Processing code to support communication between the two.**
 
