@@ -219,6 +219,9 @@ Product
 
 First things first, I drew a preliminary sketch
 
+
+![](media/images/schematicdraft.jpg)
+
  - I began by adding the switches and the toner
 
 ![](media/images/circuit1.jpg)
