@@ -582,14 +582,9 @@ For the end of level screen, I used the audio from my Mid-Term project
  - Figure out why my game interval is being made 0.
 
 #### What I accomplished
-Having completed every thing else, I noticed that there would be moments when the notes would not move. To figure out what the issue was, I tried printing along different points in the code to see where the interval was becoming 0. I had it initalized as such, but it should have changed once Arduino and Processing started communicating. The value from Arduino was being accepted but the if conditions to determine the difficulty bonus and the interval were not being executed. I did some googling and I found that sometimes Arduino can be communicate faster than processing, so I decided to add a fade out in the beginning to give the two time to start communicating properly. 
+Having completed every thing else, I noticed that there would be moments when the notes would not move. To figure out what the issue was, I tried printing along different points in the code to see where the interval was becoming 0. I had it initalized as such, but it should have changed once Arduino and Processing started communicating. The value from Arduino was being accepted but the if conditions to determine the difficulty bonus and the interval were not being executed. I did some googling and I found that sometimes Arduino can be communicate faster than processing, so I decided to add a fade out in the beginning to give the two time to start communicating properly. The method suggested on the [Stack Exchange Page](https://arduino.stackexchange.com/questions/1830/reducing-lag-between-the-arduino-and-a-processing-sketch-on-my-computer) was not working so I decided to try this instead. 
 
 
-#### Problems
- - 
-
-### Takeaways
- - 
 
 
 
