@@ -553,7 +553,43 @@ Demo of Song with Increased Speed
 ### Takeaways
  - That's the last of the code functionality, now I need to comment my code.
 
+## April 27, 2021
+### Goals
+ - Adding Music
 
+
+#### What I accomplished
+
+**Adding Music**
+I realized that the game seemed a little lifeless, so I decided to add some sounds. 
+ - One as a background music for the start screen
+ - Another when the song is completed
+
+For the start screen, I did a bit of googling and found a [video](https://youtu.be/ieL3VO4VWxE) on YouTube that had music that I liked. So I decided to download the audio and crop it for the section I liked. 
+
+For the end of level screen, I used the audio from my Mid-Term project
+
+
+#### Problems
+ - I did not really have any problems. I had forgotten how to use audi files, but I checked my Mid-Term prject and used that as a guide, and it worked
+
+### Takeaways
+ - Consulting old projects/assignments can be helpful in new endeavours. 
+
+
+## April 28, 2021
+### Goals
+ - Figure out why my game interval is being made 0.
+
+#### What I accomplished
+Having completed every thing else, I noticed that there would be moments when the notes would not move. To figure out what the issue was, I tried printing along different points in the code to see where the interval was becoming 0. I had it initalized as such, but it should have changed once Arduino and Processing started communicating. The value from Arduino was being accepted but the if conditions to determine the difficulty bonus and the interval were not being executed. I did some googling and I found that sometimes Arduino can be communicate faster than processing, so I decided to add a fade out in the beginning to give the two time to start communicating properly. 
+
+
+#### Problems
+ - 
+
+### Takeaways
+ - 
 
 
 
