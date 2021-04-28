@@ -129,22 +129,26 @@ And the circuit is as follows:
 
 ![](media/images/circuit5.jpg)
 
-### Start Screen and End of Level Screens
+### Start Screen, Help Screen and End of Level Screens
 
-### Song Restarting
+For organization, I decided to add a start screen that displays the game title, two circles which represent the different songs, and a help circle.
 
-### Potentiometer
+![](media/images/StartScreen3.png)
+
+To figure out the functionality of the game, I added a help screen that the user can see. The instructions are visible once the mouse is over the the help circle. 
+
+Demo of Start Screen and Help Screen 
+
+![](media/gifs/intro.gif)
+
+After having all the notes with fall, the song is completed. And I decided to have an end of level screen to signifies that the song is completed and the score, as well as bonus is displayed. To show the percentage of how well the user did, I added stars. Each star represents a third of the score. I also added two buttons, one for restarting the song, and another for returning to the main menu.
+
+![](media/images/EOLScreen2.png)
 
 ### Second Song
+I began the game with one song, Twinkle, Twinkle, Little Star and used a text file to store the song notes and their corresponding lengths. I made another text file to store the notes and lengths of Jingle Bells.
 
 ### Music
-
-### 
-
-
-
-
-
 
 ### Problems
 - Lag,
