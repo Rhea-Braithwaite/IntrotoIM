@@ -1,7 +1,3 @@
-A description of your concept and how it was achieved
-
-A picture of your circuit schematic
-
 One or more photographs of your project
 
 Major problems, if any, and solutions, if any
@@ -14,7 +10,7 @@ A link to the video
 
 ## Description
 
-For my Final Project, I decided to do a Piano Tiles inspired game called Switch Notes. Piano Tiles is a game where different tiles appear to fall down the screen and the user presses them at a speed and time that matches the length of the tile and the music being played. For my version I decided to do something similar using switches. So the user sees a note which appears on the screen, falling within 1 of 4 lanes. When it arrives at the bottom of the screen, in the play zone, the matching switch is pressed. If the note is within the zone and the correct switch is pressed, then a sound is played for the using the note and the score is incremented.
+For my Final Project, I decided to do a Piano Tiles inspired game called Switch Notes. Piano Tiles is a game where different tiles appear to fall down the screen and the user presses them at a speed and time that matches the length of the tile and the music being played. For my version I decided to do something similar using switches. So the user sees a note which appears on the screen, falling within 1 of 4 lanes. When it arrives at the bottom of the screen, in the play zone, the matching switch is pressed. If the note is within the zone and the correct switch is pressed, then a sound is played for th note and the score is incremented.
 
 If the note is enitrely in the play zone, the score increases by 100
 If the note is only partly in the play zone, the score increases by 50
@@ -23,7 +19,7 @@ There are two song options
  - Twinkle, Twinkle, Little Star
  - Jingle Bells
  
-The overarching goal is to obtain the most points possible for each song.
+The overarching goal is to obtain the most points possible for each song, by being as accurate as possible when pressing the switches. Try and have the notes be entirely in the play zone.
 
 Additionally, it is possible for the user to change the speed of the game by using a potentiometer. This has to be done before the game begins, and the higher the speed, there is a greater amount of bonus points. 
 
@@ -35,16 +31,19 @@ Initally, I had planned on two more things
 
 ## Process
 
-### Initial Design
-To do this assignment, I first began by doing a general outline of the game design and got the notes, which I initially just had as circles. 
+### Classes
+For this project, I used two classes, one for the notes themselves, and another for the Songs. I began the game with only the notes class but decided to add the latter later on as I wanted to use two songs.
 
-The lanes were simple, just drawing lines and the same was for the play zone. I used my DreamCatcher code as it had a similar idea for falling notes, with each circle beginning to fall after the one before reached a certain point.
+### Initial Design
+To do this project, I first began by doing a general outline of the game design and the notes, which I initially just had as circles. 
+
+The lanes were simple, just drawing lines and the same was for the play zone. I used my DreamCatcher code as it had a similar idea for falling notes, with each circle beginning to fall after the one before reached a certain point on the screen.
 
 ![](media/gifs/Fall1.gif)
 
 ### Imagery
 
-The next step was the imagery for the game. I found two pictures online and decided to use them as follows:
+The next step was the imagery for the game. I found two pictures and decided to use them as follows:
 
 The background: 
 
@@ -54,8 +53,12 @@ The note:
 
 ![](media/images/note.png)
 
+**Product**
+
+![](media/gifs/SmoothFall.gif)
+
 ### Playing a Note
-Having added the images, to temporarily "play" the note, I decided to use keypressed, with these four keys being pressed, a, s, d, f, for the lanes 1, 2, 3, 4, respectively. I placed this in a function called check, and added the variable _playLane_ to keep track of the lane. If it is that Arduino will be constanly sending back values it makes sense that _playLane_ can either have values matching the lanes or not, so if a note is not being pressed, or a wrong key is pressed, the value of _playLane_ is 0.
+Having added the images, to temporarily "play" the note, I decided to use keypressed, with these four keys being pressed, a, s, d, f, for the lanes 1, 2, 3, 4, respectively. I placed this in a function called check, and added the variable _playLane_ to keep track of the lane. If it is that Arduino will be constanly sending back values, it makes sense that _playLane_ can either have values matching the lanes or not, so if a note is not being pressed, or a wrong key is pressed, the value of _playLane_ is 0. Additionally, the note image is overlayed with a purple circle to signify that it has been pressed. 
 
 ```
 void check(){
@@ -82,8 +85,11 @@ void check(){
 }
 ```
 
+Product
+![](media/gifs/notePress.gif)
+
 ### Incrementing the Score
-For the score, it is incremented depending on the location of the note relative to the play zone when a switch is pressed. If the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50. I initially had a global varaible called score that was incremented, but when I added the Song class, the score is a variable within the class.
+For the score, it is incremented depending on the location of the note relative to the play zone when a switch is pressed. If the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50. I initially had a global variable called score that was incremented, but when I added a class for each song, _Song_, the score is a variable within the class.
 
 ```
   void pressed(){
@@ -119,7 +125,36 @@ For the score, it is incremented depending on the location of the note relative 
 
 After having basic code functionality, I decided to start working on my circuit. 
 
-I began by first having a ciruit with the switches and the toner, just to try and see if I could get the communication between Arduino and Processing to work. 
+I began by first having a ciruit with the switches and the toner, just to try and see if I could get the communication between Arduino and Processing to work. The noteduration was constant for all notes, but later on I decided that to make the songs more accurately played, to give them different note durations based on the type of note on the song's msuical sheet. 
+
+```
+void playNote(){
+  if (note != 0){
+    int index = note - 1;
+    
+    if (noteSpeed == 3){
+      noteSpeed = 4;
+    }
+    if (len == 1){ // Length = 1 beat 
+      int noteDuration = 500/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration
+    }
+    else if (len == 2){ // Length = 2 beats 
+      int noteDuration = 1000/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration
+    }
+    else if (len == 4){ // Length = 4 beats
+      int noteDuration = 2000/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration  
+    }
+    else if (len == 5){ // Length = half a beat 
+      int noteDuration = 250/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration 
+    }
+    
+  }
+}
+```
 
 After that, then I added the potentiometer, to change the speed of the interval by which the notes are falling. 
 
@@ -133,22 +168,29 @@ And the circuit is as follows:
 
 ### Start Screen, Help Screen and End of Level Screens
 
+**Start Screen**
+
 For organization, I decided to add a start screen that displays the game title, two circles which represent the different songs, and a help circle.
 
 ![](media/images/StartScreen3.png)
 
-To figure out the functionality of the game, I added a help screen that the user can see. The instructions are visible once the mouse is over the the help circle. 
+**Help Screen** 
+
+For the user to figure out the functionality of the game, I added a help screen. The instructions are visible as long as the mouse is over the the help circle, in the top right hand corner of the screen.
 
 Demo of Start Screen and Help Screen 
 
 ![](media/gifs/intro.gif)
 
-After having all the notes with fall, the song is completed. And I decided to have an end of level screen to signifies that the song is completed and the score, as well as bonus is displayed. To show the percentage of how well the user did, I added stars. Each star represents a third of the score. I also added two buttons, one for restarting the song, and another for returning to the main menu.
+**End of Level Screen**
+
+After having all the notes with fall, the song is completed. And I decided to have an end of level screen to show that the song is completed. On this screen the score, as well as bonus is displayed. To show the percentage of how well the user did, I added stars. Each star represents a third of the score, and for every third, if the sscore falls into this region the star is filled. Otherwise the str is empty. I also added two buttons, one for restarting the song, and another for returning to the main menu.
 
 ![](media/images/EOLScreen2.png)
 
 ### Second Song
-I began the game with one song, Twinkle, Twinkle, Little Star and used a text file to store the song notes and their corresponding lengths. I made another text file to store the notes and lengths of Jingle Bells.
+
+I began the game with one song, Twinkle, Twinkle, Little Star, and used this to figure out the functionality of the game. A text file was used to store the song notes and their corresponding lengths. I made another text file to store the next song's notes and lengths, Jingle Bells.
 
 ### Music
 
