@@ -1,7 +1,3 @@
-One or more photographs of your project
-
-Major problems, if any, and solutions, if any
-
 Clever or difficult things about your project
 
 A link to the video
