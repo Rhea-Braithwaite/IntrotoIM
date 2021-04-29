@@ -150,6 +150,10 @@ I began the game with one song, Twinkle, Twinkle, Little Star and used a text fi
 
 ### Music
 
+And the last thing I did was to add sound files, which were loaded and played, one as background music for the start screen, and another to signifiy that the level had been completed. 
+
+This was how Switch Notes was achieved.
+
 ### Problems
 - Lag,
 
