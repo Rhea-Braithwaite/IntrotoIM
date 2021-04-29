@@ -125,6 +125,8 @@ After that, then I added the potentiometer, to change the speed of the interval 
 
 The following is the schematic:
 
+![](media/images/schematic.jpg)
+
 And the circuit is as follows:
 
 ![](media/images/circuit5.jpg)
