@@ -196,7 +196,7 @@ class Note {
     img = noteImg;
     
     if (len == 1){ // Length = 1 beat 
-      checkPoint = 320;
+      checkPoint = 330;
     }
     else if (len == 2){ // Length = 2 beats 
       checkPoint = 500;
