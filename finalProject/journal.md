@@ -524,7 +524,41 @@ I began by adding the potentiometer to the circuit board.
 
 ![](media/images/circuit5.jpg)
 
-Then I edited my Arduino to read this value, map it from 1 to 3 and write to processing. On the Processing side, this value is accepted and then used to determine the interval by which the notes will move as they fall. Depending on the speed there will be a bonus
+Then I edited my Arduino to read this value, map it from 1 to 3 and write to processing. 
+
+```
+void playNote(){
+  if (note != 0){
+    int index = note - 1;
+    
+    if (noteSpeed == 3){
+      noteSpeed = 4;
+    }
+    if (len == 1){ // Length = 1 beat 
+      int noteDuration = 500/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration
+    }
+    else if (len == 2){ // Length = 2 beats 
+      int noteDuration = 1000/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration
+    }
+    else if (len == 4){ // Length = 4 beats
+      int noteDuration = 2000/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration  
+    }
+    else if (len == 5){ // Length = half a beat 
+      int noteDuration = 250/noteSpeed;
+      tone(TONER, melody[index], noteDuration); // Play note for specific note duration 
+    }
+    
+  }
+}
+```
+
+
+
+
+On the Processing side, this value is accepted and then used to determine the interval by which the notes will move as they fall. Depending on the speed there will be a bonus
 
 ```
 if(startGame == false){
