@@ -199,6 +199,15 @@ And the last thing I did was to add sound files, which were loaded and played, o
 This was how Switch Notes was achieved.
 
 ### Problems
-- Lag,
+- Trail/Shadow: The initial plan I had included the trail. The user would have pressed the switch for the length of it. I spent quite a bit of time trying to figure out a way to do this but I could not. Area for future study.
+- Reading from file and splitting gave me a bit of trouble because of mismatching data types. 
+  - But I eventually realized that since my data is made up of integers, int[] var = int(split(s, ',')), works. I had to print several times and consult the lecture notes in order to figure this out.
+
+ - Another problem I had was concerning a lag. When I initially began using the images, the notes had a sort of trial behind them. Firstly I had the circle from my initial design still being drawn despite the fact that the image was there. Secondly I had my for loops within one another. I should have picked up on this when i tried to use i as the variable in the second for loop and I got an error, but that's why the lag was there. 
+   - To fix it, I removed the circle, and had the for loops separately, and it began to run smoothly
+ - Timing the Lengths: I had a problem trying to figure out a way to have the notes play at an accurate speed. Meaning that firstly, when falling multiple notes were not in the play zone at the same time, and secondly that when Arduino playes the note, the duration of one finishes before the next note that would end up in the play zone. 
+   - The solution for this was a bit tricky. I did a bit of math to figure out the right distance to keep ebtween the notes on screen in Processing, by measuing the playZone and bearing in mind the height of the fallin note. Then, as I wanted to play the notes with different lengths, I used math again to find in regular music the time taken for 1 beat and then used this as the basis for the other note lengths. 
+ - Lag: In the beginning, Arduino appears to be sending the speed value to Processing very quickly. Despite being accepted, the time was so fast that if I immediately started playing a song, the interval and difficulty bonus had not been determined. 
+   - For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in which a rectangular square slowly becoming transparent. This gives Processing enough time to make all the necessary decisions. 
 
 
