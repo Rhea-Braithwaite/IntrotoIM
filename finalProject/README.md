@@ -90,7 +90,7 @@ class Note {
 ### Initial Design
 To do this project, I first began by doing a general outline of the game design and the notes, which I initially just had as circles. 
 
-The lanes were simple, just drawing lines and the same was for the play zone. I used my [DreamCatcher code](https://github.com/Rhea-Braithwaite/IntrotoIM/tree/main/April13) as it had a similar idea for falling notes, with each circle beginning to fall after the one before reached a certain point on the screen.
+The lanes were simple, just drawing lines and the same was for the play zone. I used my [DreamCatcher code](https://github.com/Rhea-Braithwaite/IntrotoIM/tree/main/April13) as it had a similar idea for falling objects. Therefore, each circle began to fall after the one before reached a certain point on the screen.
 
 ![](media/gifs/Fall1.gif)
 
@@ -102,13 +102,9 @@ The background:
 
 ![](media/images/finalBG.png)
 
-Found [Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595)
-
 The note: 
 
 ![](media/images/note.png)
-
-Found [Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595)
 
 
 **Product**
@@ -183,7 +179,7 @@ For the score, it is incremented depending on the location of the note relative 
 
 After having basic code functionality, I decided to start working on my circuit. 
 
-I began by first having a ciruit with the switches and the toner, just to try and see if I could get the communication between Arduino and Processing to work. The noteduration was constant for all notes, but later on I decided that to make the songs more accurately played, to give them different note durations based on the type of note on the song's msuical sheet. 
+I began by first having a ciruit with the switches and the toner, just to try and see if I could get the communication between Arduino and Processing to work. The noteduration was constant for all notes, but later on I decided that to make the songs more accurately played, to give them different note durations based on the type of note on the song's musical sheet. 
 
 ```
 void playNote(){
@@ -254,21 +250,18 @@ I began the game with one song, Twinkle, Twinkle, Little Star, and used this to 
 
 And the last thing I did was to add sound files, which were loaded and played, one as background music for the start screen, and another to signifiy that the level had been completed. 
 
-This was how Switch Notes was achieved.
+In sum: This was how Switch Notes was achieved.
 
 ### Problems
-- Trail/Shadow: The initial plan I had included the trail. The user would have pressed the switch for the length of it. I spent quite a bit of time trying to figure out a way to do this but I could not. Area for future study.
+- Trail/Shadow: The initial plan I had included the trail. The user would have pressed the switch for the length of it. I spent quite a bit of time trying to figure out a way to do this but I could not. _Area for future study_.
 - Reading from file and splitting gave me a bit of trouble because of mismatching data types. 
-  - But I eventually realized that since my data is made up of integers, int[] var = int(split(s, ',')), works. I had to print several times and consult the lecture notes in order to figure this out.
-
- - Another problem I had was concerning a lag. When I initially began using the images, the notes had a sort of trial behind them. Firstly I had the circle from my initial design still being drawn despite the fact that the image was there. Secondly I had my for loops within one another. I should have picked up on this when i tried to use i as the variable in the second for loop and I got an error, but that's why the lag was there. 
-   - To fix it, I removed the circle, and had the for loops separately, and it began to run smoothly
- - Timing the Lengths: I had a problem trying to figure out a way to have the notes play at an accurate speed. Meaning that firstly, when falling multiple notes were not in the play zone at the same time, and secondly that when Arduino playes the note, the duration of one finishes before the next note that would end up in the play zone. 
-   - The solution for this was a bit tricky. I did a bit of math to figure out the right distance to keep ebtween the notes on screen in Processing, by measuing the playZone and bearing in mind the height of the fallin note. Then, as I wanted to play the notes with different lengths, I used math again to find in regular music the time taken for 1 beat and then used this as the basis for the other note lengths. 
+  - **Solution**: But I eventually realized that since my data is made up of integers, int[] var = int(split(s, ',')), works. I had to print several times and consult the lecture notes in order to figure this out.
+ - Another problem I had was concerning a lag. When I initially began using the images, the notes had a sort of trail behind them. Firstly I had the circle from my initial design still being drawn despite the fact that the image was there. Secondly I had my for loops within one another. I should have picked up on this when I tried to use _i_ as the variable in the second for loop and I got an error, but that's why the lag was there. 
+   - **Solution**: To fix it, I removed the code for drawing the circle, and separated the for loops, and it began to run smoothly
+ - Timing the Lengths: I had a problem trying to figure out a way to have the notes play at an accurate speed. Meaning that firstly, when falling, multiple notes were not in the play zone at the same time, and secondly that when Arduino playes the note, the duration of one finishes before the next note that would end up in the play zone. 
+   - **Solution**: The solution for this was a bit tricky. I did a bit of math to figure out the right distance to keep between the notes on screen in Processing, by measuing the playZone and bearing in mind the height of the falling note. Then, as I wanted to play the notes with different lengths, I used math again to find in regular music the time taken for 1 beat and then used this as the basis for the other note lengths. 
  - Lag: In the beginning, Arduino appears to be sending the speed value to Processing very quickly. Despite being accepted, the time was so fast that if I immediately started playing a song, the interval and difficulty bonus had not been determined. 
-   - For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in which a rectangular square slowly becoming transparent. This gives Processing enough time to make all the necessary decisions. 
-
-
+   - **Solution**: For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in whilst a rectangular square slowly becomes transparent. This gives Processing enough time to make all the necessary decisions. 
 
 ## Sources:
 **Background Image**
