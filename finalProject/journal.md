@@ -629,3 +629,7 @@ Having completed every thing else, I noticed that there would be moments when th
 Demo
 
 ![](media/gifs/fade.gif)
+
+
+## Game Demo
+[Click Here](https://youtu.be/GnAJ4O9tSwk) for the game demo
