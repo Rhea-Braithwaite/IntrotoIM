@@ -204,6 +204,7 @@ void pressed(){
 ```
 
 Product
+
 ![](media/gifs/notePress.gif)
 
 ### Takeaways
