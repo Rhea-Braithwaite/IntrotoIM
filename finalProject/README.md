@@ -264,15 +264,20 @@ In sum: This was how Switch Notes was achieved.
    - **Solution**: For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in whilst a rectangular square slowly becomes transparent. This gives Processing enough time to make all the necessary decisions. 
 
 ## Sources:
-**Background Image**
+**Game Background Image**
 
-Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
 
 **Note Image**
 
-Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
 
 **Star Image**
 
-Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+
+**Start Screen Background Image**
+
+Freepik: [Found Here](https://www.freepik.com/free-vector/elegant-music-notes-background_1166142.htm) 
+
 
