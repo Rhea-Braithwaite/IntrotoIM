@@ -634,3 +634,21 @@ Demo
 
 ## Game Demo
 [Click Here](https://youtu.be/GnAJ4O9tSwk) for the game demo
+
+
+## Sources:
+**Game Background Image**
+
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
+
+**Note Image**
+
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+
+**Star Image**
+
+Vector Shock: [Found Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+
+**Start Screen Background Image**
+
+Freepik: [Found Here](https://www.freepik.com/free-vector/elegant-music-notes-background_1166142.htm) 
