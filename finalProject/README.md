@@ -271,12 +271,12 @@ This was how Switch Notes was achieved.
 
 
 ## Sources:
-Background Image:
+**Background Image**
 Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
 
-Note Image:
+**Note Image**
 Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
 
-Star Image:
+**Star Image**
 Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
 
