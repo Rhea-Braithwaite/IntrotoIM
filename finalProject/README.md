@@ -264,6 +264,9 @@ In sum: This was how Switch Notes was achieved.
  - Lag: In the beginning, Arduino appears to be sending the speed value to Processing very quickly. Despite being accepted, the time was so fast that if I immediately started playing a song, the interval and difficulty bonus had not been determined. 
    - **Solution**: For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in whilst a rectangular square slowly becomes transparent. This gives Processing enough time to make all the necessary decisions. 
 
+### Clever/Difficult
+I would not say there was anything excessively clever, but I do like how I added the fade in, in the beginning to give Processing some time to execute the code, for determining how fast the notes should move. 
+
 ## Sources:
 **Game Background Image**
 
