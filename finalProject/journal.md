@@ -42,7 +42,7 @@ If a potentiometer was added, Processing would accept the value and use it to ch
 #### What I accomplished
 **Initial Layout** 
 
-For the initial layout, as shown in my sketch, I came up with four lanes and the drop zone at the bottom where the switch is to be pressed to play the note
+For the initial layout, as shown in my sketch, I came up with four lanes and the play zone at the bottom where the switch is to be pressed to play the note
 
 ![](media/images/bg2.png)
 
@@ -134,7 +134,7 @@ void shift(){
 ## April 21, 2020
 ### Goals
  - Figure out a way to temporarily "play" a note. 
- - Add the score, and increment it depending on the location of the note in the drop zone when it was pressed
+ - Add the score, and increment it depending on the location of the note in the play zone when it was pressed
 
 #### What I accomplished
  - **Temporarily "play" note**
@@ -170,7 +170,7 @@ void check(){
 
  - **Increment score**
  
-Then I figured out how to increment the score of the game, depending on the location of the note in the drop zone when it was pressed. I added the variable _score_ and if the note is perfectly in the drop zone then the score increases by 100, if only marginally inside, then the score increases by 50.
+Then I figured out how to increment the score of the game, depending on the location of the note in the play zone when it was pressed. I added the variable _score_ and if the note is perfectly in the play zone then the score increases by 100, if only marginally inside, then the score increases by 50.
 
 Here I also added the variable _colour_, so that when the note has been played a translucent ellipse comes over it, ie. this is from the variable _colour_ become true. 
 
@@ -625,13 +625,3 @@ Having completed every thing else, I noticed that there would be moments when th
 Demo
 
 ![](media/gifs/fade.gif)
-
-
-
-
-
-
-
-
-
-
