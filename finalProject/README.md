@@ -140,6 +140,7 @@ void check(){
 ```
 
 Product
+
 ![](media/gifs/notePress.gif)
 
 ### Incrementing the Score
