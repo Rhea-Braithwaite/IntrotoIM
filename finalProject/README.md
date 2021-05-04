@@ -2,9 +2,10 @@
 
 ## Description
 
-For my Final Project, I decided to do a Piano Tiles inspired game called Switch Notes. Piano Tiles is a game where different tiles appear to fall down the screen and the user presses them at a speed and time that matches the length of the tile and the music being played. For my version I decided to do something similar using switches. So the user sees a note which appears on the screen, falling within 1 of 4 lanes. When it arrives at the bottom of the screen, in the play zone, the matching switch is pressed. If the note is within the zone and the correct switch is pressed, then a sound is played for th note and the score is incremented.
+For my Final Project, I decided to do a Piano Tiles inspired game called Switch Notes. Piano Tiles is a game where different tiles appear to fall down the screen and the user presses them at a speed and time that matches the length of the tile and the music being played. For my version I decided to do something similar using switches. So the user sees a note which appears on the screen, falling within 1 of 4 lanes. When it arrives at the bottom of the screen, in the play zone, the matching switch is pressed. If the note is within the zone and the correct switch is pressed, then a sound is played for the note and the score is incremented.
 
 If the note is enitrely in the play zone, the score increases by 100
+
 If the note is only partly in the play zone, the score increases by 50
 
 There are two song options
@@ -30,10 +31,66 @@ Click [here](https://youtu.be/GnAJ4O9tSwk) to see a demo
 ### Classes
 For this project, I used two classes, one for the notes themselves, and another for the Songs. I began the game with only the notes class but decided to add the latter later on as I wanted to use two songs.
 
+
+Song Class
+```
+class Song{
+  int numNotes, noteIndex, score, bonus;
+  Note[] notes;
+  boolean songEnd;
+  
+  Song(int totNotes){
+    numNotes = totNotes;
+    noteIndex = 0;
+    notes = new Note[numNotes];
+    songEnd = false;
+    score = 0;
+    bonus = 0;
+  }
+```
+
+Notes Class
+```
+class Note {
+  int nWidth, nHeight, lane, note, len, checkPoint;
+  float x, y, interval;
+  PImage img;
+  boolean start, played, colour, rest;
+  
+  Note (int LANE, int NOTE, int LENGTH){
+    colour = false;
+    played = false;
+    start = false;
+    lane = LANE;
+    x = (LANE*laneWidth)-(laneWidth/2);
+    y = NOTEY;
+    nWidth = NOTEWIDTH;
+    nHeight = NOTEHEIGHT;
+    interval = NOTEINTERVAL;
+    note = NOTE;
+    len = LENGTH;
+    img = noteImg;
+    
+    if (len == 1){ // Length = 1 beat 
+      checkPoint = 330;
+    }
+    else if (len == 2){ // Length = 2 beats 
+      checkPoint = 500;
+    }
+    else if (len == 4){ // Length = 4 beats 
+      checkPoint = 750; 
+    }
+    else if (len == 5){ // Length = half a beat 
+      checkPoint = 270;
+    }
+  }
+  
+```
+
 ### Initial Design
 To do this project, I first began by doing a general outline of the game design and the notes, which I initially just had as circles. 
 
-The lanes were simple, just drawing lines and the same was for the play zone. I used my DreamCatcher code as it had a similar idea for falling notes, with each circle beginning to fall after the one before reached a certain point on the screen.
+The lanes were simple, just drawing lines and the same was for the play zone. I used my [DreamCatcher code](https://github.com/Rhea-Braithwaite/IntrotoIM/tree/main/April13) as it had a similar idea for falling notes, with each circle beginning to fall after the one before reached a certain point on the screen.
 
 ![](media/gifs/Fall1.gif)
 
@@ -45,9 +102,14 @@ The background:
 
 ![](media/images/finalBG.png)
 
+Found [Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595)
+
 The note: 
 
 ![](media/images/note.png)
+
+Found [Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595)
+
 
 **Product**
 
@@ -206,4 +268,16 @@ This was how Switch Notes was achieved.
  - Lag: In the beginning, Arduino appears to be sending the speed value to Processing very quickly. Despite being accepted, the time was so fast that if I immediately started playing a song, the interval and difficulty bonus had not been determined. 
    - For this problem, I had a sort of delay in the beginning where the screen appears to slowly load in which a rectangular square slowly becoming transparent. This gives Processing enough time to make all the necessary decisions. 
 
+
+
+## Sources:
+Background Image:
+
+Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
+
+Note Image:
+Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
+
+Star Image:
+Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/musical-note-circle-icon-vector-14119602) 
 
