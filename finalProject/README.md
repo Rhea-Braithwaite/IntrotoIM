@@ -272,7 +272,6 @@ This was how Switch Notes was achieved.
 
 ## Sources:
 Background Image:
-
 Vector Shock: [Linked Here](https://www.vectorstock.com/royalty-free-vector/background-starry-night-sky-eps-10-vector-7803595) 
 
 Note Image:
