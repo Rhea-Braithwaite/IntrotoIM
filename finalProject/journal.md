@@ -120,7 +120,6 @@ void shift(){
 
 **Product**
 
-
 ![](media/gifs/SmoothFall.gif)
 
 ### Takeaways
@@ -326,6 +325,10 @@ void playNote(int note){
   }
 }
 ```
+
+Demo
+[Click Here](https://www.youtube.com/watch?v=8YCSak6Py_)
+
 #### Problems
  - I encountered a problem here regarding the switches. At first, no sound was being played, and when I started printing in Processing the lane values were 0. So I decided to try and use Arduino separately to see what the problem was, using the Serial Monitor. Here I noticed that at Random points the switch values would change, and after closer analysis it turns out that I had not had ground connected to the circuit. I then had to mess around with the noteDuration a bit to figure out the right length for the note to play.
 
