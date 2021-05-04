@@ -62,6 +62,9 @@ Click Image to See Demo
  - The more notes there are, because I have a for loop for the shifting of each note, it becomes very laggy, so I need to find a way to improve on that
  - At the moment, it is not as if I have a time variable for each note, so how would I do the shadow element? I know that the note immediately after cannot be in the same lane, the other notes would have to stop for a moment, while that note finishes and then everything continues. 
 
+#### Next Step
+ - Finding and adding the images for the different game objects as well as the background. It would be nice to have images related to music with a nice colour scheme.
+
 ## April 20, 2020
 ### Goals
  - Add Images for The Background and the Notes
@@ -123,12 +126,13 @@ void shift(){
 ![](media/gifs/SmoothFall.gif)
 
 ### Takeaways
- - If I add code ansure to review it so that evrything is the way that I want it
+ - If I add code, ensure to review it so that evrything is the way that I want it
  - Add comments as I go along
  - If it is that I am going to include the note with the shadow for long notes then I need to have the following note be in a different lane, so that the sound won't overlap for the two. 
  - And I need to add some temporary check that will allow me to know for now if a note has been "played"
 
-
+#### Next Step
+ - Figure out how to play a note. Since I am still only working on Processing, I'll have to find some alternative to using the circuit. The keyboard seems like a good option.
 
 ## April 21, 2020
 ### Goals
@@ -211,7 +215,9 @@ Product
  - Given that I have basic code functionality, now would be a good time to start working on the Arduino compenent. If thta works fine that I can return and add the other elements that I want
  - Note to self: For the shadow element, a bar can be used to track how long a note has been pressed. If the state of the switch fro that lane changes before the bar fills, then stop playing the sound, and give only a portion of the score.
 
-
+#### Next Step
+ - Start working on the circuit. Start with a rough sketch of the schematic so I know how to build the circuit. Then build it and try to establish communication between Arduino and Processing to play the note.
+ 
 ## April 22, 2021
 ### Goals
  - Draw preliminary shcematic for Arduino
@@ -335,8 +341,10 @@ Demo
  - I encountered a problem here regarding the switches. At first, no sound was being played, and when I started printing in Processing the lane values were 0. So I decided to try and use Arduino separately to see what the problem was, using the Serial Monitor. Here I noticed that at Random points the switch values would change, and after closer analysis it turns out that I had not had ground connected to the circuit. I then had to mess around with the noteDuration a bit to figure out the right length for the note to play.
 
 ### Takeaways
- - I could add a length for the different types of notes that are to beplayed rather than have the same exact length each time, to make the songs more accurate.
+ - I could add a length for the different types of notes that are to be played rather than have the same exact length each time, to make the songs more accurate.
 
+#### Next Step
+ - To make it feel more like a game, add a Start Screen, Help Screen and End of Level Screen. 
 
 ## April 25, 2021
 ### Goals
@@ -449,7 +457,9 @@ Then I tried to work on the Shadow. I took a few hours to try and find different
  - If something is proving impossible to do, and there is a time constraint, it is okay to change your mind about it.
  - To play different song lengths, I'll need different distances between the notes, ie. different checkpoints.
 
-
+#### Next Step
+ - Work on changing the speed using a potentiometer
+ - Figure out the gap in between notes of different lengths when they are falling, as well as how to correspond this to  Arduino playing the note. We can't have sound overlapping one another, or notes being in the play zone at the same time. 
 
 ## April 26, 2021
 ### Goals
@@ -596,10 +606,12 @@ Demo of Song with Increased Speed
 ### Takeaways
  - That's the last of the code functionality, now I need to comment my code.
 
+#### Next Step
+ - Add some music to give the game some life. 
+
 ## April 27, 2021
 ### Goals
  - Adding Music
-
 
 #### What I accomplished
 
