@@ -1,13 +1,6 @@
-# IntrotoIM
+# Rhea Braithwaite: IntrotoIM
 ## Github Repository
 ### Much smaller
 
-*this should be in italics*
-**this should be bold**
+See Folders for Projects I have worked on during Introduction to Interactive Media Course
 
-this is a sentence
-this is a sentence in the same paragraph
-so is this
-likewise this
-
-this is a new paragraph
