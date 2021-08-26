@@ -1,5 +1,5 @@
 # IntrotoIM
-## Smaller
+## Github Repository
 ### Much smaller
 
 *this should be in italics*
